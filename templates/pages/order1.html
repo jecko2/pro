@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="https://scripts.cyberpro.co.ke/order/public/opskill-styles.css" rel="stylesheet">
+    <link href="assets/lib/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://scripts.cyberpro.co.ke/order/public/bootstrap/js/jquery.min.js"></script>
+    <script src="assets/lib/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="">
+    <style>
+        body {
+            font-family: "DM Sans" !important;
+        }
+
+
+        @media (min-width: 768px) {
+            .opclick label {
+                text-align: center;
+
+
+
+                visibility: hidden;
+            }
+
+        }
+
+
+        .input-group input[type="text"] {
+            width: 10% !important;
+        }
+
+        .row {
+            position: relative;
+            margin-bottom: 10px;
+            clear: both;
+            font-family: "DM Sans" !important;
+        }
+
+        @media (max-width: 580px) {
+            .opclick label {
+                text-align: left;
+            }
+
+            .opclick input {
+                padding: 10px;
+            }
+
+            .opclick h6 {
+                clear: both;
+                line-height: 0px;
+                margin: 0 0 0em;
+                padding: 0em 0 0;
+            }
+
+            .opclick hr {
+                margin-bottom: 0em;
+            }
+
+            .pricingbottom {
+                position: fixed;
+                background: #f0fcff;
+                bottom: 0;
+                padding: 15px;
+                width: 100%;
+                background: #fff;
+                float: absolute;
+                max-height: 100px;
+                z-index: 999999;
+                border: 1px solid rgba(0, 0, 100, .09);
+            }
+        }
+
+        .buttonSubmit {
+            margin-left: 75px;
+            color: #286bb8;
+            text-transform: uppercase;
+            border: 1px solid #286bb8;
+        }
+
+        .bgbg {
+            background-color: #f0f8ff;
+            color: white;
+        }
+
+        .bgbg h6 {
+            color: #000;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .topbarform {
+            background-color: #2e6d7d;
+            padding: 2px 15px;
+        }
+
+        .topbartext {
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            padding-top: 7px;
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .formcategory {
+                min-width: 33%;
+                font-size: 16px !important;
+                padding-bottom: 30px !important;
+
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .topbartext {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mobibutton {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mobispacing {
+                padding-top: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .formcategory {
+                min-width: 100% !important;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mobiadditional {
+                margin-left: 20px;
+            }
+        }
+    </style>
+
+
+    <section class="features" id="features">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <div class="borderdottedleft">
+
+                        <form role="form" name="form" id="myform" method="POST">
+                            <div class="rc-orderform__step-flag bgbg">
+                                <h6> 1. Paper Details </h6>
+                            </div>
+                            <hr />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-md-12"> Academic level </label>
+                                <div class="col-lg-9">
+                                    <div class="row btn-group opclick" data-toggle="buttons">
+                                        <label class="col-sm-3  btn btn-default mobibutton ">
+                                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="High School">
+                                        </label>
+                                        <label class="col-sm-3  btn btn-default mobibutton active">
+                                            <input type="radio" name="ops_aclevel" id="ops_aclevel"
+                                                value="Undergraduate" checked>
+                                        </label>
+                                        <label class="col-sm-3  btn btn-default mobibutton ">
+                                            <input type="radio" name="" id="ops_aclevel" value="Masters">
+                                        </label>
+                                        <label class="col-sm-3  btn btn-default mobibutton ">
+                                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="Doctoral">
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label for="exampleSelect1" class="col-sm-3">Type of Service</label>
+                                <select name="order_service" class="form-control custom-select border-default col-sm-9"
+                                    id="exampleSelect1" required>
+                                    <option value="1#Writing From scratch">Writing From scratch</option>
+                                    <option value="0.8#Editing">Editing</option>
+                                    <option value="0.9#Problem solving">Problem solving</option>
+                                    <option value="0.6#Paraphrasing/Rewriting">Paraphrasing/Rewriting</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="exampleSelect1" class="col-sm-3">Type of Paper</label>
+                                <select name="order_tpaper" class="form-control custom-select border-default col-sm-9"
+                                    id="exampleSelect1">
+                                    <option value="1#essay" selected="selected">Essay (Any Type)</option>
+                                    <option value="1#Essay (Any Type)">Essay (Any Type)</option>
+                                    <option value="1#Article (Any Type)">Article (Any Type)</option>
+                                    <option value="1#Assignment">Assignment</option>
+                                    <option value="1#Content (Any Type)">Content (Any Type)</option>
+                                    <option value="1#Admission Essay">Admission Essay</option>
+                                    <option value="1#Annotated Bibliography">Annotated Bibliography</option>
+                                    <option value="1#Argumentative Essay">Argumentative Essay</option>
+                                    <option value="1#Article Review">Article Review</option>
+                                    <option value="1#Book/Movie Review">Book/Movie Review</option>
+                                    <option value="1#Business Plan">Business Plan</option>
+                                    <option value="1#Capstone Project">Capstone Project</option>
+                                    <option value="1#Case Study">Case Study</option>
+                                    <option value="1#Coursework">Coursework</option>
+                                    <option value="1#Creative Writing">Creative Writing</option>
+                                    <option value="1#Critical Thinking">Critical Thinking</option>
+                                    <option value="1#Dissertation">Dissertation</option>
+                                    <option value="1#Dissertation chapter">Dissertation chapter</option>
+                                    <option value="1#Lab Report">Lab Report</option>
+                                    <option value="1.2#Math Problem">Math Problem</option>
+                                    <option value="1#Research Paper">Research Paper</option>
+                                    <option value="1#Research Proposal">Research Proposal</option>
+                                    <option value="1#Research Summary">Research Summary</option>
+                                    <option value="1#Scholarship Essay">Scholarship Essay</option>
+                                    <option value="1#Speech">Speech</option>
+                                    <option value="1#Statistic Project">Statistic Project</option>
+                                    <option value="1#Term Paper">Term Paper</option>
+                                    <option value="1#Thesis/Thesis Chapter">Thesis/Thesis Chapter</option>
+                                    <option value="1#Other">Other</option>
+                                    <option value="1#Presentation or Speech">Presentation or Speech</option>
+                                    <option value="1#Q&A">Q&A</option>
+                                    <option value="1#speech work">speech work</option>
+                                    <option value="1#Application Paper">Application Paper</option>
+                                    <option value="1#Analysis">Analysis</option>
+                                    <option value="1#Memo/Letter">Memo/Letter</option>
+                                    <option value="1#Outline">Outline</option>
+                                    <option value="1#Personal reflection">Personal reflection</option>
+                                    <option value="0.7#Presentation/PPT">Presentation/PPT</option>
+                                    <option value="1#Report (Any type)">Report (Any type)</option>
+                                    <option value="1#Response Essay">Response Essay</option>
+                                    <option value="1#Acceptance letter">Acceptance letter</option>
+                                    <option value="2#Online Exam">Online Exam</option>
+                                    <option value="0.8#Revision Paper">Revision Paper</option>
+                                    <option value="1.3#Blog Writing">Blog Writing</option>
+                                    <option value="1#Executive Summary">Executive Summary</option>
+                                    <option value="0.6#Extended Revision">Extended Revision</option>
+                                    <option value="1.5#Microsoft Project">Microsoft Project</option>
+                                    <option value="0.5#Progressive Paper">Progressive Paper</option>
+                                    <option value="0.6#Dissertation Editing">Dissertation Editing</option>
+                                    <option value="1.3#Grant proposal">Grant proposal</option>
+                                    <option value="0.6#Paraphrase">Paraphrase</option>
+                                    <option value="1.5#Nursing calculations">Nursing calculations</option>
+                                    <option value="0.8#Combined Sections">Combined Sections</option>
+                                    <option value="0.5#Dissertation editing">Dissertation editing</option>
+                                    <option value="0.5#Proofreading/editing">Proofreading/editing</option>
+                                    <option value="2#Brochure">Brochure</option>
+                                    <option value="0.5#Paper Editing">Paper Editing</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleSelect2" class="col-sm-3">Subject Area</label>
+                                <select name="order_subject" class="form-control col-sm-9 custom-select border-default"
+                                    id="exampleSelect2">
+                                    <option value="1#Any" selected="selected"> Select Subject </option>
+
+                                    <option value="1#Archaeology">Archaeology</option>
+                                    <option value="2#Architecture">Architecture</option>
+                                    <option value="1#Arts">Arts</option>
+                                    <option value="1#Astronomy">Astronomy</option>
+                                    <option value="1#Biology">Biology</option>
+                                    <option value="1#Business">Business</option>
+                                    <option value="1.2#Chemistry">Chemistry</option>
+                                    <option value="1#Childcare">Childcare</option>
+                                    <option value="1#Computers">Computers</option>
+                                    <option value="1#Counseling">Counseling</option>
+                                    <option value="1#Criminology">Criminology</option>
+                                    <option value="1#Economics">Economics</option>
+                                    <option value="1#Education">Education</option>
+                                    <option value="1.1#Engineering">Engineering</option>
+                                    <option value="1#Environmental-Studies">Environmental-Studies</option>
+                                    <option value="1#Ethics">Ethics</option>
+                                    <option value="1#Ethnic-Studies">Ethnic-Studies</option>
+                                    <option value="1#Finance">Finance</option>
+                                    <option value="1#Food-Nutrition">Food-Nutrition</option>
+                                    <option value="1#Geography">Geography</option>
+                                    <option value="1#Healthcare">Healthcare</option>
+                                    <option value="1#History">History</option>
+                                    <option value="1#Law">Law</option>
+                                    <option value="1#Linguistics">Linguistics</option>
+                                    <option value="1#Literature">Literature</option>
+                                    <option value="1#Management">Management</option>
+                                    <option value="1.3#Mathematics">Mathematics</option>
+                                    <option value="1#Medicine">Medicine</option>
+                                    <option value="1#Music">Music</option>
+                                    <option value="1#Nursing">Nursing</option>
+                                    <option value="1#Philosophy">Philosophy</option>
+                                    <option value="1#Physical-Education">Physical-Education</option>
+                                    <option value="1.2#Physics">Physics</option>
+                                    <option value="1#Political-Science">Political-Science</option>
+                                    <option value="1.2#Programming">Programming</option>
+                                    <option value="1#Psychology">Psychology</option>
+                                    <option value="1#Religion">Religion</option>
+                                    <option value="1#Sociology">Sociology</option>
+                                    <option value="1.1#Statistics">Statistics</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3" for="order_title">Title</label>
+                                <input type="text" name="order_title" class="form-control col-sm-9 border-default"
+                                    id="order_title" aria-describedby="emailHelp"
+                                    placeholder="Enter the title of your paper" required>
+                                <input type="hidden" name="cpn_namedb" class="form-control col-sm-9">
+                            </div>
+                            <style>
+                                .ck.ck-editor__editable>.ck-placeholder::before {
+                                    color: #d21714;
+                                    font-family: Georgia;
+                                }
+                            </style>
+                            <div class="form-group row">
+                                <label for="exampleTextarea" class="col-sm-3">Paper Instructions </label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <textarea class="form-control col-sm-9 border-default" name="order_instructions"
+                                            id="editor"
+                                            placeholder="Write anything you feel is important for the writer to consider. An outline, a grading scale, and other documents may be uploaded as additional materials."></textarea>
+                                        <p class="text-danger"
+                                            style="margin: 5px 0px;font-size: 13px;font-style: normal;"><b> Please don't
+                                                enter your Personal Information (Phone Number, Email Address) in this
+                                                section </b></p>
+                                        <script>
+                                            ClassicEditor
+                                                .create(document.querySelector('#editor'))
+                                                .then(editor => {
+                                                    console.log(editor);
+                                                })
+                                                .catch(error => {
+                                                    console.error(error);
+                                                });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="exampleTextarea" class="col-sm-3">Additional materials </label>
+                                <div class="dropzone text-center padding20 col-sm-9">
+                                    <div class="dz-message">
+                                        <p> Drag and Drop your files here Or Click here to upload</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group opclick row">
+                                <label class="col-sm-3"> Paper format </label>
+                                <div class="col-sm-9 btn-group">
+                                    <div class="row" data-toggle="buttons">
+                                        <label class="col-sm-2 btn btn-default active mobibutton">
+                                            <input type="radio" name="order_citation" value="APA" checked>APA
+                                        </label>
+                                        <label class="btn btn-default col-sm-2 mobibutton">
+                                            <input type="radio" name="order_citation" value="MLA">MLA
+                                        </label>
+                                        <label class="btn btn-default col-sm-2 mobibutton">
+                                            <input type="radio" name="order_citation" value="Havard">Havard
+                                        </label>
+                                        <label class="btn btn-default col-sm-2 mobibutton">
+                                            <input type="radio" name="order_citation" value="Chicago">Chicago
+                                        </label>
+                                        <label class="btn btn-default col-sm-2 mobibutton">
+                                            <input type="radio" name="order_citation" value="Turabian">Turabian
+                                        </label>
+                                        <label class="btn btn-default col-sm-2 mobibutton">
+                                            <input type="radio" name="order_citation" value="Other">Other
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rc-orderform__step-flag bgbg">
+                                <h6> 2. Pricing Details </h6>
+                            </div>
+                            <hr />
+                            <div class="form-group row">
+                                <label class="col-sm-3">Number of Pages </label>
+                                <div class="input-group col-sm-4 p-0">
+
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default border-default btn-number"
+                                            disabled="disabled" data-type="minus" data-field="order_pages">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                    <input type="text" step="1" id="order_pages" name="order_pages" id="order_pages"
+                                        class="form-control input-number border-default col-sm-12 text-center" value="1"
+                                        min="0" max="100" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default border-default btn-number"
+                                            data-type="plus" data-field="order_pages">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </span>
+
+                                    <br />
+
+                                    <input id="words" type="hidden" value="300" />
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <div class="btn-group opclick">
+                                        <div class="row mobispacing" data-toggle="buttons">
+                                            <label class="col-sm-6 btn btn-default active mobibutton">
+                                                <input type="radio" name="order_spacing" value="1#Double" checked>Double
+                                                Spaced
+                                            </label>
+                                            <label class="btn btn-default col-sm-6 mobibutton">
+                                                <input type="radio" name="order_spacing" value="2#Single">Single Spaced
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label class="col-sm-3" for="order_title"></label>
+                                <div class="row col-sm-9">
+                                    <div class="float-left order_wordsmain"> 300 words approx </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group opclick row">
+                                <label class="col-sm-3"> Currency </label>
+                                <div class="col-sm-9 p-0 btn-group">
+                                    <div class="row col-sm-12" data-toggle="buttons">
+                                        <label class="btn btn-default col-sm-2 active mobibutton">
+                                            <input type="radio" id="cc" value="1#USD" name="order_currency" checked>USD
+
+                                        </label>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3">Sources</label>
+                                <div class="input-group col-sm-5  p-0 ">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default border-default btn-number"
+                                            disabled="disabled" data-type="minus" data-field="order_sources">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                    <input type="text" id="order_sources" name="order_sources"
+                                        class="form-control border-default input-number col-sm-12 text-center" value="0"
+                                        min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-number border-default"
+                                            data-type="plus" data-field="order_sources">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3">PowerPoint Slides</label>
+                                <div class="input-group col-sm-5  p-0 ">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default border-default btn-number"
+                                            disabled="disabled" data-type="minus" data-field="order_pptslides">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                    <input type="text" id="order_pptslides" name="order_pptslides"
+                                        class="form-control border-default input-number col-sm-12 text-center" value="0"
+                                        min="0" max="50">
+                                    <input type="hidden" id="config_priceperslide" name="config_priceperslide"
+                                        value="0.68">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-number border-default"
+                                            data-type="plus" data-field="order_pptslides">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group opclick row">
+                                <label class="col-lg-3 col-md-12"> Deadline </label>
+                                <div class="col-lg-9 col-md-12 btn-group">
+                                    <div class="row" data-toggle="buttons">
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="37.99#6 Hours" name="order_deadline">6
+                                            Hours
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="33.99#12 Hours" name="order_deadline">12
+                                            Hours
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2 active mobibutton">
+                                            <input type="radio" id="a1" value="31.99#24 Hours" name="order_deadline"
+                                                checked>24 Hours
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="28.99#48 Hours" name="order_deadline">48
+                                            Hours
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="24.99#5 Days" name="order_deadline">5
+                                            Days
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="21.99#10 Days" name="order_deadline">10
+                                            Days
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="18.99#14 Days" name="order_deadline">14
+                                            Days
+                                        </label>
+
+                                        <label class="btn btn-default col-sm-2  mobibutton">
+                                            <input type="radio" id="a1" value="14.99#30 Days" name="order_deadline">30
+                                            Days
+                                        </label>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3" for="order_title"></label>
+                                <div class="col-sm-9"><small>
+                                        <div class="newdeadline"></div>
+                                    </small></div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group row">
+                                <label class="col-sm-3" for="order_title">Additional services</label>
+                                <div class="col-sm-9 addons  p-0 mobiadditional">
+
+                                    <label class="row text-left checkbox" style="width: 100%;" for="Checkbox1">
+                                        <input value="5" name="order_upsells[]" type="checkbox" class="addon col-1"
+                                            data-toggle="checkbox" style="margin-top: 13px !important;">
+                                        <div class="col-8">Get Writer Samples</div>
+                                        <div class="col-2"> $5 </div>
+                                    </label>
+
+
+
+
+                                    <label class="row text-left checkbox" style="width: 100%;" for="Checkbox1">
+                                        <input value="20" name="order_upsells[]" type="checkbox" class="addon col-1"
+                                            data-toggle="checkbox" style="margin-top: 13px !important;">
+                                        <div class="col-8">Get Copy of Sources</div>
+                                        <div class="col-2"> $20 </div>
+                                    </label>
+
+
+
+
+
+                                    <label class="row text-left checkbox" style="width: 100%;" for="Checkbox1">
+                                        <input value="5" name="order_upsells[]" type="checkbox" class="addon col-1"
+                                            data-toggle="checkbox" style="margin-top: 13px !important;">
+                                        <div class="col-8">Progressive Delivery</div>
+                                        <div class="col-2"> $5/page </div>
+                                    </label>
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="hidden" name="order_clientid" class="form-control border-default" value="">
+                                <input type="hidden" name="client_email" value="">
+                            </div>
+
+                            <input id="order_amount" class="form-control fontbig form-control-plaintext" type="hidden"
+                                name="order_amount" value="$" id="example-text-input">
+                            <div id="subcontact" class="form-group">
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="sticky-top">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="pricecalculate">
+
+                                    <div style="font-size: 15px; font-weight: bold" class="topicright"> </div>
+                                    <div class="ops_aclevelright"></div>
+                                    <hr style="margin-bottom: 0px" />
+                                    <div class="order_tpaperright"></div>
+                                    <div class="ssss"></div>
+                                    <div class="order_subjectright"></div>
+
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="order_pagesright float-left"></div>
+                                        </div>
+                                        <div class="col-sm-5 font-weight-bold">
+                                            <div class="totalsumright"> </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="order_slidesright"></div>
+                                        </div>
+                                        <div class="col-sm-5 font-weight-bold">
+                                            <div class="order_slidesrightprice"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="order_discountright"></div>
+                                        </div>
+                                        <div class="col-sm-5 font-weight-bold">
+                                            <div class="order_discountrightprice"></div>
+                                        </div>
+                                    </div>
+
+                                    <hr style="margin-bottom: 0px" />
+                                    <div class="row">
+                                        <div class="col-sm-7 font-weight-bold"> Total price </div>
+                                        <div class="col-sm-5 text-success font-weight-bold">
+                                            <div class="orderamountc">$</div>
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <input id="words" type="hidden" value="300"
+                                        style="width: 100px;border: 0px solid #fff;text-align: right" />
+                                    <input id="addontotal" type="hidden" name="addontotal" value="0" id="df" readonly>
+                                    <input id="addontotalp" type="hidden" name="addontotalp" value="0" id="df" readonly>
+                                    <input type="hidden" name="cpn_value" id="cpn_value" class="form-control" value="1">
+                                    <div class="alert alert-danger print-error-msg" style="display:none"> </div>
+
+
+                                    <form class="coupon_area">
+
+                                        <div class="form-group row">
+                                            <input type="text" name="cpn_name" class="form-control col-sm-9"
+                                                placeholder="Enter coupon" required>
+                                            <button class="btn btn-success btn-submit col-sm-3">Apply</button>
+
+                                        </div>
+                                        <img width="200px" src="/order/oned.png">
+                                    </form>
+
+                                    <script type="text/javascript">
+
+
+                                        $(document).ready(function () {
+
+                                            $(".btn-submit").click(function (e) {
+
+                                                e.preventDefault();
+
+                                                var _token = $("input[name='_token']").val();
+                                                var cpn_name = $("input[name='cpn_name']").val();
+
+                                                $.ajax({
+
+                                                    url: "https://scripts.cyberpro.co.ke/order/order/coupon",
+
+                                                    type: 'POST',
+
+                                                    dataType: "json",
+
+                                                    data: { cpn_name: cpn_name },
+
+                                                    success: function (data) {
+
+                                                        if ($.isEmptyObject(data.error)) {
+
+
+                                                            $(".print-error-msg").css('display', 'block');
+
+                                                            $(".print-error-msg").html(data.success);
+
+                                                        } else {
+
+                                                            //Get
+                                                            var bla = $('#order_amount').val();
+                                                            var code = data.error;
+                                                            var num = parseFloat(code) * parseFloat(bla);
+                                                            var discount_amount = parseFloat(bla) - parseFloat(num);
+                                                            var discount_amnt = discount_amount.toFixed(2);
+                                                            var n_dic = num.toFixed(2);
+
+                                                            $(".success-msg").css('display', 'block');
+                                                            $(".order_discountright").html('Discount');
+                                                            $(".order_discountrightprice").html('-$' + discount_amnt);
+
+                                                            $(".orderamountc").html(n_dic);
+
+                                                            $('input[name="cpn_value"]').val(code);
+                                                            $('input[name="cpn_namedb"]').val(cpn_name);
+                                                            $('input[name="order_coupon"]').val(code);
+
+                                                            $('input[name="order_amount"]').val(n_dic);
+                                                            $(".coupon_area").css('display', 'none');
+                                                            $(".print-error-msg").css('display', 'none');
+                                                        }
+
+                                                    }
+
+                                                });
+
+                                            });
+
+                                        });
+
+
+                                    </script>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

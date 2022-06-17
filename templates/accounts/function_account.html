@@ -1,0 +1,2868 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+
+
+
+
+
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K8P3GKQ');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0;">
+
+    <link rel="apple-touch-icon"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/apple-touch-icon.png?v=1654615028">
+
+    <title>Auth</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon.ico"
+        type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="https://admin.writemyessays.net/public_new/build/img/favicon/safari-pinned-tab.svg"
+        color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/build/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/build/css/select2.min.css?v=1654615028">
+    <link rel="stylesheet"
+        href="https://admin.writemyessays.net/public_new/build/datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+        href="https://admin.writemyessays.net/public_new/build/js/libs/jscrollpane/jquery.jscrollpane.css">
+
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/css_new/styles.css?v=1654615028">
+
+
+
+    <script type="text/javascript">
+        var TITLE_CTRL = 'auth';
+        var CURRENT_USER = null;
+        var OFFICE_IP = false;
+        var SINGLE_PAYMENT_METHOD = false;
+        var MOBILE_APP_PAY_DISALLOW = false;
+        var MOBILE_APP = false;
+        var MESSAGE_LENGTH = 100;
+
+
+
+
+
+        var new_rating = false;
+    </script>
+
+    <script type="text/javascript"> localStorage.clear();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="google-site-verification" content="UJrWpnB_xghCOvFgPcc_i-G9" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="869489869275-u142vn8l6l8mf2e43ftpk7l2ak0lhbcv.apps.googleusercontent.com">
+
+
+
+
+    <script>var crypto_pay = false;</script>
+</head>
+
+<body class="page-top">
+
+
+
+
+
+
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8P3GKQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="circle-preloader-wrap hide-spinner" id="page-preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <div class="auth-fluid container-fluid ">
+            <div class="row auth-wrapper">
+                <div class="main-holder col-12">
+
+                    <div class="header-row row justify-content-between align-items-center">
+                        <div class="logo-item">
+                            <a href="https://writemyessays.net">
+                                <img src="https://admin.writemyessays.net/public_new/build/img/logo.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-row row justify-content-center">
+                        <div id="registration_box" class="registration center-holder row" style="display:none">
+                            <div class="content-part col">
+                                <div class="bold-title">Join us!</div>
+                                <div class="sub-title-hint">Hundred thousands of students achieve goals with
+                                    WriteMyEssays.net!</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <form id="registration_form" data-phone-valid-by-country="true"
+                                            class="form-auth w-100 validated_form" method="post">
+                                            <input type="text" class="d-none" name="registration" value="">
+                                            <input class="form-element" type="hidden" name="timezone">
+                                            <input type='hidden' name="target" value="orders">
+                                            <input class="form-element" type="hidden" name="last_name"
+                                                value="novalidate">
+                                            <input type="hidden" name="token" value="5c4588163523f342e4a52619d3717643">
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_name">
+                                                        Name
+                                                        <img class="img-tooltip "
+                                                            src="/public_new/build/img/optinal.png"
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Please leave your real name or nickname that we can use to welcome you on our website."
+                                                            alt="" />
+                                                    </label>
+                                                    <div class="optinal-hint">(Optional)</div>
+                                                </div>
+                                                <input type="text" class="input-control " name="first_name"
+                                                    id="input_name" placeholder="Type your name"
+                                                    data-wmes-tst="reg-frst_name">
+                                            </div>
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_email">
+                                                        Email
+                                                    </label>
+                                                </div>
+                                                <input type="email" name="email" class="input-control " id="input_email"
+                                                    placeholder="Type your email" data-wmes-tst="reg-eml">
+                                            </div>
+
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_phone">
+                                                        Phone
+                                                    </label>
+                                                    <div class="optinal-hint">(Optional)</div>
+                                                </div>
+                                                <div class="input-phone-inner">
+                                                    <input id="input_phone" name="phone_number" type="tel"
+                                                        class="input-control " placeholder="(000) 000 - 0000"
+                                                        data-wmes-tst="reg-phn">
+                                                    <div class="phone-box filter-single-wrap">
+                                                        <select id="select-country" class="select2-phone" name="country"
+                                                            data-attr-current-country="KE"></select>
+                                                    </div>
+                                                    <div class="block-error"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group form-check block_element">
+                                                <input type="checkbox" name="proceed" class="form-check-input"
+                                                    data-wmes-tst="reg-agree-gdpr">
+                                                <label class="form-check-label ">
+                                                    <div class="form-check-text">
+                                                        I have read and agree to the
+                                                        <a target="_blank" href="
+                                                               https://writemyessays.net/terms/
+                                                               ">Terms of Use</a>
+                                                        ,
+                                                        <a target="_blank"
+                                                            href="
+                                                               https://writemyessays.net/money-back-guarantee
+                                                                                                                              ">Money
+                                                            Back Guarantee</a>
+                                                        ,
+                                                        <a target="_blank"
+                                                            href="
+                                                               https://writemyessays.net/privacy-policy/
+                                                                                                                               ">Privacy</a>
+                                                        and
+                                                        <a target="_blank"
+                                                            href="
+                                                               https://writemyessays.net/cookies-policy/
+                                                                                                                               ">Cookie
+                                                            Policy</a>
+                                                        of WriteMyEssays.net.
+                                                    </div>
+                                                </label>
+                                                <div class="block-error"></div>
+                                            </div>
+
+
+                                            <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                                <button type="submit" data-wmes-tst="reg-rgstr-btn"
+                                                    class="btn-custom yellow-btn">register
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                        <div class="change-option-box w-100">
+                                            <div class="change-option-inner">
+                                                Already have an account?
+                                                <span class="btn-form go-login-btn">Log in</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form style="display:none" method="post" id='hidden_auth_form'
+                                action="/auth?auto_login_registration=1">
+                                <input type='text' name='email' value=''>
+                                <input type='text' name='pass' value=''>
+                                <input type='submit'>
+                            </form>
+                        </div>
+
+                        <div id="log-in" class="login-box center-holder row">
+                            <div class="content-part col">
+                                <div class="bold-title">Welcome back!</div>
+                                <div class="sub-title-hint">Log in to continue</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <!-- login form -->
+                                        <form id="login_form" class="login_form form-auth w-100 validated_form"
+                                            action="" method="post">
+                                            <input type='hidden' name="target" value="orders">
+                                            <input type='hidden' name="current_gmt_offset" value="">
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_email_log">
+                                                        Email
+                                                    </label>
+                                                </div>
+                                                <input type="email" name="email" data-wmes-tst="auth-eml" value=""
+                                                    class="input-control " id="input_email_log"
+                                                    placeholder="Type your email">
+                                            </div>
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_password">
+                                                        Password
+                                                    </label>
+                                                </div>
+                                                <input type="password" data-wmes-tst="auth-pass" class="input-control "
+                                                    type="password" name="pass" id="input_password"
+                                                    placeholder="Type your password">
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" name="remember_me" class="form-check-input"
+                                                    value="1">
+                                                <label class="form-check-label">
+                                                    <div class="form-check-text">Remember me for 2 weeks</div>
+                                                    <span class="password_forgot-btn btn-form">Forgot password</span>
+                                                </label>
+                                            </div>
+                                            <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                                <button type="submit" class="btn-custom yellow-btn"
+                                                    data-wmes-tst="auth-sbmt-btn">Log in
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                        <div class="change-option-box w-100">
+                                            <div class="change-option-inner">
+                                                New to WriteMyEssays.net?
+                                                <span class="btn-form go-register-btn"
+                                                    data-wmes-tst="auth-rgstr-btn">Register now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="forgot_password" class="forgot_password-box center-holder row" style="display: none;">
+                            <div class="content-part col">
+                                <div class="bold-title">No panic!</div>
+                                <div class="sub-title-hint">Let’s recover your password in no time!</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <span
+                                            class="back-btn d-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex">back</span>
+                                        <div class="forgot-hint w-100">Enter your email and <br> we’ll send the
+                                            instructions.
+                                        </div>
+                                        <form id="form_recovery_password" class="form-auth w-100 validated_form"
+                                            action="" method="post">
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_email_forgot">
+                                                        Email
+                                                    </label>
+                                                </div>
+                                                <input type="email" name="email" class="input-control "
+                                                    id="input_email_forgot" placeholder="Type your email">
+                                            </div>
+
+                                            <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                                <button type="submit"
+                                                    class="btn-forgot btn-custom yellow-btn">SEND</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="change-option-box w-100">
+                                        <div class="change-option-inner">
+                                            Don’t have an account?
+                                            <span class="btn-form go-reg-btn">Register now</span>
+                                        </div>
+                                    </div>
+                                    <span class="back-btn d-flex d-md-none d-lg-none d-xl-none">back</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="forgot_success" class="forgot_success-box center-holder row" style="display: none;">
+                            <div class="content-part col">
+                                <div class="bold-title">No panic!</div>
+                                <div class="sub-title-hint">Let’s recover your password in no time!</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <div class="aside-inner">
+                                            <img class="rocker-success"
+                                                src="/public_new/build/img/paper-help-check-01.png" alt="" />
+                                            <div class="recovery-link-box">Password recovery email<br> has been sent to
+                                                <span class="email-recovery email-address-value"></span>
+                                            </div>
+                                            <button type="button" class="recovery-btn btn-transparent btn-custom">DONE
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="change-option-box w-100">
+                                        <div class="change-option-inner">
+                                            Didn’t receive the email yet?<br><span class="btn-form go-resend-btn">Resend
+                                            </span> the email.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="footer-item row" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scripts -->
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/jquery.min.js?v=1"></script>
+    <script defer type="text/javascript" src="/public_new/build/js/jquery.cookie.js?ver=1654615028"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/popper.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/bootstrap.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/select2.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/datetimepicker/moment.js"></script>
+    <script defer
+        src="https://admin.writemyessays.net/public_new/build/datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script defer type="text/javascript" src="/public_new/js/smart.min.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/ajaxList.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/assets/js/ajax.js?ver=1654615028"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/select2_contrycode.js"></script>
+
+    <script defer type="text/javascript" src="/public_new/js/jquery.validate.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/jquery.validate.custom.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/form_validator.js?ver=16546150281654656978"></script>
+    <script defer type="text/javascript"
+        src="/public_new/assets/js/form_validator_custom.js?ver=16546150281654656978"></script>
+    <script defer type="text/javascript" src="/public_new/js/data_layer.js?ver=1654615028"></script>
+    <script defer
+        src="https://admin.writemyessays.net/public_new/build/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/owl.carousel.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"></script>
+    <!-- <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/fingerprint_v3.js"></script>  -->
+
+
+
+    <script defer src="https://admin.writemyessays.net/public_new/assets/js/balance.js?v=1654656978"></script>
+
+
+
+
+    <script defer src="https://admin.writemyessays.net/public_new/assets/js/main.js?v=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/assets/js/auth.js?ver=16546150281654656978"></script>
+
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5b45dd666d961556373d9ca2/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!-- Modal Cancel-->
+    <div class="modal-custom modal fade" id="ModalCancel" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cancel order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="order_id" value="" />
+                    <input type="hidden" name="reason_id" value="10" />
+                    <input type="hidden" name="descr" value='' />
+                    <div class="modal-body">
+                        <p>Are you sure? Please specify the reason why you want to cancel this order. After you do this,
+                            we
+                            won’t work on it.<br>
+                            But we’ll keep the order for you on the order page if you decide to get back to it!</p>
+                        <div class="reason-select-box filter-single-wrap d-none d-md-block d-lg-block d-xl-block">
+                            <div class="reason-select block_element">
+                                <select id="cancel_reasons" name="reason"
+                                    class="select2-custom-single form-control select2-hidden-accessible">
+                                    <option data-mobile-value="" value="" data-select2-id="">Choose your reason</option>
+                                    <option value="Duplicate" data-select2-id="">Duplicate</option>
+                                    <option value="The assignment has been placed by mistake" data-select2-id="">The
+                                        assignment has been placed by mistake
+                                    </option>
+                                    <option value="The assignment has been rescheduled" data-select2-id="">The
+                                        assignment
+                                        has been rescheduled
+                                    </option>
+                                    <option value="The assignment has been cancelled" data-select2-id="">The assignment
+                                        has
+                                        been cancelled
+                                    </option>
+                                    <option value="The assignment has been changed" data-select2-id="">The assignment
+                                        has
+                                        been changed
+                                    </option>
+                                    <option value="Decided to complete it by myself" data-select2-id="">Decided to
+                                        complete
+                                        it by myself
+                                    </option>
+                                    <option value="Checking the price" data-select2-id="">Checking the price</option>
+                                    <option value="Price is too high" data-select2-id="">Price is too high</option>
+                                    <option value="Not sure about your services" data-select2-id="">Not sure about your
+                                        services
+                                    </option>
+                                    <option value="Ordered it from another company" data-select2-id="">Ordered it from
+                                        another company
+                                    </option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                            <div class="input-hint alert-reason-required">This field is required</div>
+                        </div>
+                        <div class="reason-radiobox-wrap d-flex d-md-none d-lg-none d-xl-none flex-column">
+                            <strong>Choose your reason</strong>
+                            <div class="radio-reasons-holder">
+                                <div class="radio-hint alert-reason-required ">Required</div>
+                                <div class="btns-radio-reason btn-group-toggle d-flex flex-column"
+                                    data-toggle="buttons">
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="Duplicate" id="option1"
+                                            autocomplete="off">
+                                        <span>Duplicate</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile"
+                                            value="The assignment has been placed by mistake" id="option2"
+                                            autocomplete="off">
+                                        <span>The assignment has been placed by mistake</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile"
+                                            value="The assignment has been rescheduled" id="option3" autocomplete="off">
+                                        <span>The assignment has been rescheduled</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile"
+                                            value="The assignment has been cancelled" id="option4" autocomplete="off">
+                                        <span>The assignment has been cancelled</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="The assignment has been changed"
+                                            id="option5" autocomplete="off">
+                                        <span>The assignment has been changed</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile"
+                                            value="Decided to complete it by myself" id="option6" autocomplete="off">
+                                        <span>Decided to complete it by myself</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="Checking the price" id="option7"
+                                            autocomplete="off">
+                                        <span>Checking the price</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="Price is too high" id="option8"
+                                            autocomplete="off">
+                                        <span>Price is too high</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="Not sure about your services"
+                                            id="option9" autocomplete="off">
+                                        <span>Not sure about your services</span>
+                                    </label>
+                                    <label class="btn-radio-single btn">
+                                        <input type="radio" name="reason_mobile" value="Ordered it from another company"
+                                            id="option10" autocomplete="off">
+                                        <span>Ordered it from another company</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cancel New for WMP-->
+    <div class="modal-cancel modal-custom modal fade" id="ModalCancelNew" tabindex="-1" role="dialog"
+        aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cancel order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form id="CancelNewForm">
+                    <input type="hidden" name="order_id" value="" />
+                    <input type="hidden" name="reason_id" value="10" />
+                    <input type="hidden" name="descr" value='' />
+                    <div class="modal-body">
+                        <p class="modal-cancel__subtitle">We are sorry to see you go</p>
+
+                        <div class="tab">
+                            <p>Please specify the reason for order cancellation</p>
+                            <div class="reason-select-box filter-single-wrap d-none d-md-block d-lg-block d-xl-block">
+                                <div class="reason-select block_element">
+                                    <select id="cancel_reasons" name="reason"
+                                        class="select2-custom-single form-control select2-hidden-accessible"
+                                        data-placeholder="Select your reason">
+                                        <option value=""></option>
+                                        <option value="Lateness" data-select2-id="">Lateness</option>
+                                    </select>
+                                    <div class="select-arrow"></div>
+                                </div>
+                                <div class="alert-required" style="display: none">This field is required</div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <div class="comment-wrap">
+                                <p>Please tell us what went wrong</p>
+                                <textarea class="comment-area alert-control" name="comment"
+                                    placeholder="Leave a comment in at least 3 words"></textarea>
+                                <div class="alert-required">This field is required</div>
+                            </div>
+
+                            <div class="reason-radiobox-wrap d-flex flex-column">
+                                <strong class="reason-cancel-caption">
+                                    <span data-choosen-text="Here is your quick resolution:">Choose the offer that suits
+                                        you most:</span>
+                                    <span class="tooltip-cancel"
+                                        data-tooltip="These offers fully comply with our Money Back Guarantee"></span>
+                                </strong>
+                                <div class="radio-reasons-holder">
+                                    <div class="btns-radio-reason btn-group-toggle d-flex flex-column"
+                                        data-toggle="buttons">
+                                        <label class="btn-radio-single btn">
+                                            <input type="radio" name="reason_mobile" value="Duplicate" id="option1"
+                                                autocomplete="off">
+                                            <span>120% money to be saved on a store credit balance</span>
+                                        </label>
+                                        <label class="btn-radio-single btn">
+                                            <input type="radio" name="reason_mobile"
+                                                value="The assignment has been placed by mistake" id="option2"
+                                                autocomplete="off">
+                                            <span>100% money back to the original payment source</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="prevBtn" class="btn-custom btn-transparent" type="button">Back</button>
+                        <button id="nextBtn" class="btn-custom yellow-btn btn-transparent" type="button">Next</button>
+
+
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal Cancel New for WMP-->
+
+    <!-- Success Modal Cancel New for WMP-->
+    <div class="modal-cancel-success modal-custom modal fade" id="ModalCancelNewSuccess" tabindex="-1" role="dialog"
+        aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <h5>Thank you</h5>
+                    <p>$45 have been added to your store credit balance</p>
+                    <button class="btn-custom yellow-btn" type="button" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Success Modal Cancel New for WMP-->
+
+    <!-- Modal Add to favotites-->
+    <div class="modal-custom modal fade" id="ModalAddWriter" tabindex="-1" role="dialog"
+        aria-labelledby="ModalAddWriterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add writer to favorites</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="writer_id" value="" />
+                    <div class="modal-body">
+                        <p>Liked the writer? By adding to your list, you’ll be able to find your favorites in minutes
+                            for
+                            your future orders. To remember what they're good at, type it below (ex.: “best at math”).
+                        </p>
+                        <div class="comment-wrap">
+                            <div class="optinal-item d-flex justify-content-end">
+                                <div class="text-right">(Optional)</div>
+                            </div>
+                            <textarea class="comment-area" name="comment" placeholder="Your comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Remove writer from favorites-->
+    <div class="modal-custom modal fade" id="ModalRemoveWriter" tabindex="-1" role="dialog"
+        aria-labelledby="ModalRemoveWriterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Remove writer from favorites</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="writer_id" value="" />
+                    <div class="modal-body">
+                        <p>Please share with us all reasons why you may not want to work with this writer again.<br
+                                class="d-block d-md-none d-lg-none d-xl-none"> We promise to keep it a secret! </p>
+                        <div class="comment-wrap">
+                            <div class="optinal-item d-flex justify-content-end">
+                                <div class="text-right">(Optional)</div>
+                            </div>
+                            <textarea class="comment-area" name="comment" placeholder="Your comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Add writer to blacklist-->
+    <div class="modal-custom modal fade" id="ModalAddBlacklist" tabindex="-1" role="dialog"
+        aria-labelledby="ModalAddWriterBlacklistTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add writer to blacklist</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="order_id" value="" />
+                    <input type="hidden" name="client_id" value="" />
+                    <input type="hidden" name="writer_id" value="" />
+                    <div class="modal-body">
+                        <p>Whoa, whoa! What happened? Please share with us all reasons why you may not want to work with
+                            this writer again. We promise to keep it a secret!</p>
+                        <div class="comment-wrap">
+                            <div class="optinal-item d-flex justify-content-end">
+                                <div class="text-right">(Optional)</div>
+                            </div>
+                            <textarea name="comment" class="comment-area" placeholder="Your comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Remove writer from blacklist-->
+    <div class="modal-custom modal fade" id="ModalRemoveBlacklist" tabindex="-1" role="dialog"
+        aria-labelledby="ModalRemoveWriterBlacklistTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Remove writer from blacklist</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="writer_id" value="" />
+                    <input type="hidden" name="client_id" value="" />
+                    <div class="modal-body">
+                        <p>Great! We're are so glad to see you've changed your mind! This writer will be able to
+                            complete
+                            your orders.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete-->
+    <div class="modal-custom modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Delete order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="order_id" value="" />
+                    <div class="modal-body">
+                        <p>Are you sure? Think twice, because after deleting this order, you will not be able to get
+                            back to
+                            it anymore.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-custom modal fade" id="ModalCustomMessage" tabindex="-1" role="dialog"
+        aria-labelledby="ModalCustomMessage" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalCustomMessageTitle">Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="ModalCustomMessageContent"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Update Deadline-->
+    <div class="modal-custom modal fade" id="ModalUpdateDeadline" tabindex="-1" role="dialog"
+        aria-labelledby="ModalUpdateDeadlineTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Update your current deadline</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="comment-wrap">
+                        <form id="form_extend_deadline" class="not_validated_form" action="/orders?ajax=extend_deadline"
+                            method="post">
+                            <label for="datetimepicker" class="title-calc">Deadline</label>
+                            <div class="input-group date">
+                                <input name="extended_deadline" value="" data-x-value=" " id="datetimepicker1" readonly
+                                    type="text" class="form-control datetimepicker" aria-describedby="basic-addon2">
+                                <span class="input-group-addon icon-close-datetimepicker">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button" class="btn-custom yellow-btn"
+                        data-extend-deadline-submit=""><span>Extend</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Send for revision-->
+    <div class="modal-revision modal-custom modal fade" id="ModalSendRevision" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSendRevisionTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="form_order_revision_upd" class="validated_form" style="margin: 0;">
+                        <div class="comment-wrap">
+                            <h5 class="modal-title text-left" id="exampleModalLongTitle">What should be improved per
+                                your
+                                initial instructions?</h5>
+                            <p>If you need a clarification on your paper rather than a revision, <a
+                                    href="javascript:void(0);" data-open-tab-messages="" class="link">send a message</a>
+                                to our support or your writer.</p>
+                            <div class="line-field-block ">
+                                <div class="filter-single-wrap">
+                                    <div class="filter-single-inner select-multiple-wrapper block_element">
+                                    </div>
+                                </div>
+                                <div class="error-block" style="display:none;" data-error="reasons">Specify the reason
+                                    for
+                                    this revision
+                                </div>
+                            </div>
+                            <div class="line-field-block block_element">
+                                <textarea name="descr" class="form-control" id="reason-for-revision-revisiov" cols="30"
+                                    rows="10" placeholder="Type your revision details (at least 3 words)"></textarea>
+                            </div>
+                            <div class="revision-deadline">
+
+
+                                <p>
+                                    You have <b id="revision-deadline"> days hours</b> left on your deadline.<br>
+                                    Give writer more hours?
+                                </p>
+
+                                <div class="input-group date">
+                                    <input name="extended_deadline" value="" data-x-value=" 1970/01/01 01:00"
+                                        id="datetimepicker2" readonly type="text" class="form-control datetimepicker"
+                                        aria-describedby="basic-addon2">
+                                    <span class="input-group-addon icon-close-datetimepicker">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="extend_cdeadline" value="1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button" class="btn-custom yellow-btn"
+                        data-send-for-revision-submit=""><span>Submit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Send for revision paid -->
+    <div class="modal-revision modal-popup modal fade" id="ModalSendRevisionPaid" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSendRevisionTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100" id="exampleModalLongTitle">Free revisions are no longer
+                        available!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_order_revision_paid" class="validated_form" action="/order" method="post"
+                        style="margin: 0;">
+                        <p class="mb-4"><strong>3 free revisions are available
+                                within 7 days after approval. It's
+                                been days.</strong></p>
+                        <p>You can request a paid revision. Place a new order for Editing/proofreading and upload your
+                            paper with the detailed revision instructions.</p>
+                        <input type="hidden" name="type_of_paper" value="581040">
+                        <input type="hidden" name="preferred_writer" value="3">
+                        <input type="hidden" name="type_of_work" value="2">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button" class="btn-custom yellow-btn" data-send-for-revision-paid-submit=""><span>Paid
+                            revision</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Make a Formal Complaint-->
+    <div class="modal-revision modal-custom modal fade" id="ModalFormalComplaint" tabindex="-1" role="dialog"
+        aria-labelledby="ModalFormalComplaintTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left" id="exampleModalLongTitle"><span class="first_modal_step"
+                            data-step="1">Revision or</span>
+                        Quality Evaluation?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_quality_evaluation" style='margin:0;' action="">
+                        <div class="comment-wrap">
+                            <div class="first_modal_step" data-step="1">
+                                <p>Quality Evaluation means you are not happy with the received paper and would like to
+                                    receive compensation.</p>
+                                <p>Once Quality Evaluation status is set:
+                                <ul>
+                                    <li><b>the writer stops working on the order,</b></li>
+                                    <li><b>the assignment is not delivered to you.</b></li>
+                                </ul>
+                                </p>
+                                <p>
+                                    If you still need this paper, click on the <b>Send for Revision</b> button and
+                                    specify
+                                    what needs to be corrected.
+                                </p>
+                            </div>
+                            <div class="second_modal_step" style="display:none;" data-step="2">
+
+                                <p>Indicate the reason(s) why you’d like the writer to stop working on the order.
+                                    Specify
+                                    all the details in the comments.</p>
+                                <p><b>The more details, the quicker our manager will find a solution.</b></p>
+                                <p class="mb-0"><b>1. Choose the reason(s):</b></p>
+                                <div class="reason-block line-field-block">
+                                    <div class="checkbox-v" data-toggle="tooltip" title="">
+                                        <label for="reason-1">
+                                            <input type="checkbox" name="qe_reason[]" value="4" id="reason-1">
+                                            <span class="check-t"><span class="cr"></span></span>
+                                            <span class="check-t check-text">Instructions were not fully followed</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-v" data-toggle="tooltip" title="">
+                                        <label for="reason-2">
+                                            <input type="checkbox" name="qe_reason[]" value="22" id="reason-2">
+                                            <span class="check-t"><span class="cr"></span></span>
+                                            <span class="check-t check-text">Grammar / Punctuation mistakes</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-v" data-toggle="tooltip" title="">
+                                        <label for="reason-3">
+                                            <input type="checkbox" name="qe_reason[]" value="25" id="reason-3">
+                                            <span class="check-t"><span class="cr"></span></span>
+                                            <span class="check-t check-text">Lateness</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-v" data-toggle="tooltip" title="">
+                                        <label for="reason-4">
+                                            <input type="checkbox" name="qe_reason[]" value="28" id="reason-4">
+                                            <span class="check-t"><span class="cr"></span></span>
+                                            <span class="check-t check-text">Plagiarism</span>
+                                        </label>
+                                    </div>
+                                    <div class="error-block" style="display:none;bottom: -10px;" data-error="qe_reason">
+                                        Please choose the reason for Quality Evaluation
+                                    </div>
+                                </div>
+                                <p><b>2. Leave your comments</b></p>
+                                <div class="line-field-block">
+                                    <textarea name="message_text" id="reason-for-revision-revisiov" cols="30" rows="10"
+                                        placeholder="Type your comments here (5 words min)"></textarea>
+                                    <div class="error-block" style="display:none;" data-error="message_text">Please
+                                        enter at
+                                        least 5 words
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent w-100 open_second_modal_step" data-step="1">
+                        <span>I want Quality Evaluation</span></button>
+                    <button type="button" class="btn-custom yellow-btn w-100 open_send_revision" data-step="1"
+                        data-dismiss="modal"><span>Send for Revision</span></button>
+                    <button type="button" class="btn-custom btn-transparent" data-step="2" data-dismiss="modal"
+                        style="display:none;"><span>Cancel</span></button>
+                    <button type="button" class="btn-custom yellow-btn" data-step="2" data-quality_evaluation-submit=""
+                        style="display:none;"><span>Submit</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete accaunt -->
+    <div class="modal-revision modal-custom modal fade" id="ModalDeleteAccaunt" tabindex="-1" role="dialog"
+        aria-labelledby="ModalDeleteAccaunt" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left">Delete account?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>If you choose "Delete", you'll lose this account for good!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button" class="btn-custom yellow-btn" onclick="deleteAccount.call(this)">
+                        <span>Delete</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Success -->
+    <div class="modal-popup modal fade" id="ModalSuccess" tabindex="-1" role="dialog" aria-labelledby="ModalSuccess"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left">Success!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You can now use your new password to log in! </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Make a Files attachment -->
+    <div class="attachment-mbl_new modal-attachment modal-custom modal fade" id="ModalFileAttachment" tabindex="-1"
+        role="dialog" aria-labelledby="ModalFileAttachmentTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left" id="exampleModalLongTitle">Add files</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" data-column-name="files[]" name="files[]" id="files_input" multiple="multiple" />
+                    <p>Load your spaceship with all the needed files.</p>
+                    <div class="attach-size-error attachment-error" style="display:none;">1 or more attachments failed.
+                    </div>
+                    <div class="drop-files--extended__container">
+                        <div class="drop-files--extended__inner">
+                            <label class="btn btn-default btn-file" for="files_input"><span>Browse</span>
+                            </label>
+                            <div class="drop-files--or">or</div>
+                            <div class="drop-files--text drop-files--text-mobile">
+                                <div class="d-none d-lg-block d-md-block d-xl-block">Drag and drop files here</div>
+                                <span>The file size limit is 100 Mb per file.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="order_id" value="" />
+                    <input type="hidden" name="direction" value="" />
+                    <input type="hidden" name="recipient" value="" />
+                    <div class="fileload-container scroll-pane">
+                        <div class="error-files"></div>
+                        <div class="valid-files"></div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button"
+                        class="btn-custom yellow-btn upload-btn disabled-btn"><span>Upload</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal delete file -->
+    <div class="modal-custom modal fade" id="ModalFileDelete" tabindex="-1" role="dialog"
+        aria-labelledby="ModalFileDelete" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="form_delete_file_from_order">
+                    <input type="hidden" name="file_id" value="" />
+                    <input type="hidden" name="order_id" value="" />
+                    <input type="hidden" name="client_id" value="" />
+                    <div class="modal-header">
+                        <h5 class="modal-title text-left">Delete this file?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>We’ll delete this file forever but you’ll be able to add it again later.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-del-file btn-custom yellow-btn"><span>Delete</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal send file to email -->
+
+    <div class="modal-custom modal fade" id="ModalFileSend" tabindex="-1" role="dialog" aria-labelledby="ModalFileSend"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form>
+                    <input type="hidden" name="order_id" value="">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-left">Send file to email</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="text_success_sent_file_to_email">
+                            Use this feature to send final version of your work to Please note that
+                            you can only do this once, so make sure your email address is correct. Alternatively, you
+                            can
+                            always access your final file in Files section below.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="button" class="btn-send-file btn-custom yellow-btn"
+                            data-order="send-final-to-email">
+                            <span>Send</span><i class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-custom modal fade" id="ModalComplaintSubmitted" tabindex="-1" role="dialog"
+        aria-labelledby="ModalComplaintSubmitted" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left">Thank you for sharing your comments!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The responsible manager will examine the situation and contact you within the next 48 hours for
+                        further discussion.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>OK</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pay Now -->
+    <div class="modal_paynow modal-custom modal fade" id="ModalPayNow" tabindex="-1" role="dialog"
+        aria-labelledby="ModaPayNow" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-pay-body d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                        <div class="summary_col col">
+                            <div class="paynow_header d-flex flex-row flex-md-column flex-lg-column flex-xl-column">
+                                Total price:
+                                <div class="price_total" data-pay-modal-total-price="">$<span
+                                        data-price-pay-modal=""></span></div>
+                                <div class="payed_by_bonuses" style="display:none;"><span>Paid:</span>
+                                    $<span data-payed-pay-modal=""></span></div>
+                            </div>
+                            <div class="paynow_body">
+                                <div class="summary_body_inner">
+                                    <div class="summary_main">
+                                        <div class="summary_pay_type summary_pay_item">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_type_option summary_pay_caption"
+                                                    data-pay-modal-type-of-paper=""></div>
+                                                <div class="summary_pay_option summary_grey_option">$ <span
+                                                        data-pay-modal-type-of-paper-price=""></span></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="summary_pay_quantity summary_pay_item">
+                                            Quantity: <span class="summary_pages-quantity summary_grey_option"
+                                                data-pay-modal-quantity=""></span>
+                                        </div>
+                                        <div class="summary_pay_deadline summary_pay_item">
+                                            Deadline: <span class="summary_item_deadline summary_grey_option"
+                                                data-pay-modal-deadline=""></span>
+                                        </div>
+                                        <div class="summary_pay_level summary_pay_item">
+                                            Academic Level: <span class="summary_item_level summary_grey_option"
+                                                data-pay-modal-ac-level=""></span>
+                                        </div>
+                                        <div class="summary_pay_subject summary_pay_item">
+                                            Subject area: <span class="summary_item_subject summary_grey_option"
+                                                data-pay-modal-subject=""></span>
+                                        </div>
+                                    </div>
+                                    <div class="summary_pay_extra">
+                                        <div class="summary_pay_writer summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_writer_option summary_pay_caption">Writer's
+                                                    Category:
+                                                    <span data-name-writer-category=""></span>
+                                                </div>
+                                                <div class="summary_writer_price summary_grey_option"
+                                                    data-pay-modal-writer-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_plagiarism summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_plagiarism_option summary_pay_caption">Plagiarism
+                                                    Report</div>
+                                                <div class="summary_plagiarism_price summary_grey_option"
+                                                    data-pay-modal-plagiarism-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_plagiarism_turnitin summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_plagiarism_option summary_pay_caption">Turnitin
+                                                    Report
+                                                </div>
+                                                <div class="summary_plagiarism_price summary_grey_option"
+                                                    data-pay-modal-turnitin-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_vip summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_vip_option summary_pay_caption">VIP Customer Service
+                                                </div>
+                                                <div class="summary_vip_price summary_grey_option"
+                                                    data-pay-modal-vip-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_message summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_message_option summary_pay_caption">Text Message
+                                                </div>
+                                                <div class="summary_message_price summary_grey_option"
+                                                    data-pay-modal-message-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_table summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_table_option summary_pay_caption">Table of Contents
+                                                </div>
+                                                <div class="summary_table_price summary_grey_option"
+                                                    data-pay-modal-table-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_sources summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_sources_option summary_pay_caption">Sources used
+                                                </div>
+                                                <div class="summary_sources_price summary_grey_option"
+                                                    data-pay-modal-sources-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_abstract summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_abstract_option summary_pay_caption">Abstract Page
+                                                </div>
+                                                <div class="summary_abstract_price summary_grey_option"
+                                                    data-pay-modal-abstract-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_editors summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_editors_option summary_pay_caption">Editor’s Check
+                                                </div>
+                                                <div class="summary_editors_price summary_grey_option"
+                                                    data-pay-modal-editors-price=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary_language summary_pay_item" style="display: none">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="summary_language_option summary_pay_caption">Simple Language
+                                                </div>
+                                                <div class="summary_language_price summary_grey_option">Free</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="payment-col payment-col-img">
+                            <form action="/payment" id="payment_form">
+                                <button type="button" class="close d-none d-md-block d-lg-block d-xl-block"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                <small>Choose Payment Method</small>
+                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="bid">
+                                <input type="hidden" name="token">
+                                <input type="hidden" name="type_form" value="0">
+                                <input type="hidden" name="mcid" value="">
+                                <input type="hidden" name="moid" value="">
+                                <input type="hidden" name="mchid" value="3">
+                                <input type="hidden" name="mtid" value="4">
+                                <input type="hidden" name="from_admin" value="1">
+                                <input type="hidden" name="m">
+                                <div class="payment_card-desktop d-none d-md-block d-lg-block d-xl-block ">
+                                    <script type="text/javascript"
+                                        src="https://cdn.safecharge.com/safecharge_resources/v1/sc_api_applepay.min.js"></script>
+                                    <div class="payment_apple-pay payment_method_box" data-payment-submit=""
+                                        data-payment-method="34">
+                                        <div class="payment_method">Apple pay</div>
+                                    </div>
+                                    <div class="payment_bonus disabled-element payment_method_box">
+                                        <div class="payment_method">Pay with your Bonus</div>
+                                        <div class="payment_method_details" data-bonus-inf="">You have no bonus yet
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-mob d-block d-md-none d-lg-none d-xl-none ">
+                                    <div class="payment-carousel owl-theme">
+                                        <script type="text/javascript"
+                                            src="https://cdn.safecharge.com/safecharge_resources/v1/sc_api_applepay.min.js"></script>
+                                        <div class="payment_apple-pay payment_method_box" data-payment-submit=""
+                                            data-payment-method="34">
+                                            <div class="payment_method">Apple pay</div>
+                                        </div>
+                                        <div class="payment_bonus disabled-element payment_method_box item">
+                                            <div class="payment_method">Pay with your Bonus</div>
+                                            <div class="payment_method_details" data-bonus-inf="">You have no bonus yet
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bonus-wrapper" style="display: none">
+                                    <div class="bonus-wrap-head">
+                                        <button type="button"
+                                            class="close-bonus-payment d-none d-md-block d-lg-block d-xl-block"></button>
+                                        My balance
+                                        <div class="price_total">$<span data-store-credit-pay-modal=""></span></div>
+                                        <button type="button"
+                                            class="btn-pay-collapse btn-go-payment d-block d-md-none d-lg-none d-xl-none"></button>
+                                    </div>
+                                    <div class="bonus-wrap-body">
+                                        <div class="bonus-wrap-text">Specify the amount of bonus to be used</div>
+                                        <div class="bonus-input-box">
+                                            <div class="bonus-input-inner d-flex">
+                                                <input placeholder="0.00" data-max-bonus="" type="text" name="amount"
+                                                    value="" class="bonus-pay-input">
+                                                <button type="button" class="apply-bonus">
+
+                                                    <div class="call-spinner" style="display: none;">
+
+                                                        <div class="lds-css ng-scope">
+                                                            <div class="lds-spinner">
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="apply_bonus_span">Pay</span>
+                                                </button>
+                                            </div>
+                                            <div class="bonus_code_error_place alert-required"></div>
+                                        </div>
+                                        <div class="bonus_code_hint" style="display: none;">You're using your
+                                            $<span class="bonus-amount-all bonus-amount" data-using-bonus="">40</span>
+                                            bonus. The remaining
+                                            $<span class="bonus-left bonus-amount" data-remaining-pay="">10</span> can
+                                            be paid using another
+                                            payment method.
+                                        </div>
+                                        <button type="button"
+                                            class="btn-gopay btn-go-payment btn-custom btn-transparent d-block d-md-none d-lg-none d-xl-none">
+                                            <span>Go back to payment methods</span></button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex d-md-none d-lg-none d-xl-none">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Thank you -->
+    <div class="modal-thanku modal-custom modal fade" id="ModalThankYou" tabindex="-1" role="dialog"
+        aria-labelledby="ModalThankYou" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close d-none d-md-block d-lg-block d-xl-block" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+                <div class="modal-body text-center">
+                    <img class="call-thanku-img"
+                        src="https://admin.writemyessays.net/public_new/build/img/paper-help-check-01.png" alt="" />
+                    <div class="thanku-caption">Thank you for your payment!</div>
+                    <div class="thanku-wrap">
+                        Now you can sit back and track your order while our writer is working on it!
+                    </div>
+                    <a href="" data-thankyou-order-id="" class="btn-track-order btn-custom"><span>Track order</span></a>
+                </div>
+                <div class="modal-footer d-flex d-md-none d-lg-none d-xl-none">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Rate Summary (Serivce + Writer) -->
+    <div class="modal-custom modal fade" id="ModalRateSummary" tabindex="-1" role="dialog"
+        aria-labelledby="ModalRateSummary" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="form_order_rate" method="POST" class='validated_form'>
+                    <input type='hidden' name='id' value=''>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Rate Our Team</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you satisfied? Let us know.</p>
+                        <div class="rate-boxes">
+                            <div class="rate-wrap-team rate-wrap d-flex">
+                                <div class="rate-wrap-inner d-flex">
+                                    <div class="rate-img d-none d-md-flex d-lg-flex d-xl-flex">
+                                        <div class="support-img rate-item-img"></div>
+                                    </div>
+                                    <div class="rate-items-holder">
+                                        <div class="rate-title-box">How did you like our Support Team?</div>
+                                        <div class="wrap-rate-stars wrap-rate-inner">
+                                            <div class="rating element d-flex">
+                                                <label>
+                                                    <input type="radio" name="service_rate" value="5"
+                                                        title="Outstanding"> 5
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="service_rate" value="4" title="Good"> 4
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="service_rate" value="3"
+                                                        title="Unsatisfactory"> 3
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="service_rate" value="2" title="Poor"> 2
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="service_rate" value="1" title="Very poor">
+                                                    1
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="alert-rate" data-service-rate-error="" style="display: none;">Please
+                                            choose one of the options above
+                                        </div>
+                                        <div class="alert-msg-rate" data-service-rate-msg="" style="display: none;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rate-wrap-recommend rate-wrap d-flex">
+                                <div class="rate-img d-none d-md-flex d-lg-flex d-xl-flex">
+                                    <div class="team-img rate-item-img"></div>
+                                </div>
+                                <div class="rate-items-holder">
+                                    <div class="rate-title-box">How likely are you to recommend us?</div>
+                                    <div class="btns-recommend-rate element wrap-rate-inner btn-group-toggle d-flex"
+                                        data-toggle="buttons">
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="1" id="option1"
+                                                autocomplete="off"
+                                                title="No, I will not recommend your service to anyone">
+                                            <span>1</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="2" id="option2"
+                                                autocomplete="off" title="">
+                                            <span>2</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="3" id="option3"
+                                                autocomplete="off" title="">
+                                            <span>3</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="4" id="option4"
+                                                autocomplete="off" title="">
+                                            <span>4</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="5" id="option5"
+                                                autocomplete="off" title="I do not know so far">
+                                            <span>5</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="6" id="option6"
+                                                autocomplete="off" title="">
+                                            <span>6</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="7" id="option7"
+                                                autocomplete="off" title="">
+                                            <span>7</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="8" id="option8"
+                                                autocomplete="off" title="">
+                                            <span>8</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="9" id="option9"
+                                                autocomplete="off" title="">
+                                            <span>9</span>
+                                        </label>
+                                        <label class="btn-rate-single btn">
+                                            <input type="radio" name="recommend_rate" value="10" id="option10"
+                                                autocomplete="off"
+                                                title="Sure, I will recommend your service to my friends">
+                                            <span>10</span>
+                                        </label>
+                                    </div>
+                                    <div class="alert-rate" data-recommend-rate-error="" style="display: none;">Please
+                                        choose one of the options above
+                                    </div>
+                                    <div class="alert-msg-rate" data-recommend-rate-msg="" style="display: none;">I do
+                                        not
+                                        know so far
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="comment-wrap element">
+                            <a class="comment-wrap-link" href="javascript:void(0);" data-link-open="block_1"
+                                data-open-text="Leave comment for support" data-hide-text="Hide comment">Leave comment
+                                for
+                                support</a>
+                            <div class="comment-wrap element" style="display:none;" data-block-open="block_1">
+                                <div class="optinal-item d-flex justify-content-end">
+                                    <div class="text-right">(Optional)</div>
+                                </div>
+                                <textarea class="comment-area" name="feedback"
+                                    placeholder="Type more details here"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="rate-boxes">
+                            <div class="rate-wrap-writer rate-wrap d-flex flex-column">
+                                <div class="rate-wrap-inner d-flex">
+                                    <div class="rate-img d-none d-md-flex d-lg-flex d-xl-flex">
+                                        <div class="writer-img rate-item-img"></div>
+                                    </div>
+                                    <div class="rate-items-holder">
+                                        <div class="rate-title-box">How did you like the writer’s work?</div>
+                                        <div class="wrap-rate-stars wrap-rate-inner">
+                                            <div class="rating d-flex">
+                                                <label>
+                                                    <input type="radio" name="writer_rate" value="5" title="Excellent ">
+                                                    5
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="writer_rate" value="4" title="Good"> 4
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="writer_rate" value="3"
+                                                        title="Satisfactory"> 3
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="writer_rate" value="2" title="Poor"> 2
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="writer_rate" value="1" title="Very bad"> 1
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="alert-rate" data-writer-rate-error="" style="display: none;">Please
+                                            choose one of the options above
+                                        </div>
+                                        <div class="alert-msg-rate" data-writer-rate-msg="" style="display: none;">
+                                            Outstanding
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-wrap mb-4">
+                            <a class="comment-wrap-link" href="javascript:void(0);" data-link-open="block_2"
+                                data-open-text="Leave comment for your writer" data-hide-text="Hide comment">Leave
+                                comment
+                                for your writer</a>
+                            <div class="comment-wrap" style="display:none;" data-block-open="block_2">
+                                <div class="optinal-item d-flex justify-content-end">
+                                    <div class="text-right">(Optional)</div>
+                                </div>
+                                <textarea class="comment-area" name="feedback_writer"
+                                    placeholder="Type more details here"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent btn-modal-dismiss" data-dismiss="modal">
+                            <span>Rate later</span></button>
+                        <button type="button" class="btn-rate-disabled btn-custom yellow-btn"
+                            data-rate-summary-submit="">
+                            <span>Submit</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Add Exising Preffered Writer -->
+    <div class="modal-custom modal fade" id="ModalAddWriterExists" tabindex="-1" role="dialog"
+        aria-labelledby="ModalAddWriterExists" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add writer to favorites</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>This writer is already in your favourites.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Close</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Order-->
+    <div class="modal-custom modal fade" id="ModalEditOrder" tabindex="-1" role="dialog"
+        aria-labelledby="ModalEditOrder" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <p class="mb-3">Tell us what details you would like to change in your order. Our Support Team
+                            will
+                            then make them for you.</p>
+                        <div class="comment-wrap line-field-block">
+                            <textarea class="comment-edit" name="edit_comment"
+                                placeholder="Type your comments here "></textarea>
+                            <div class="alert-required" style="display:none;" data-error="message_text">Please specify
+                                what
+                                needs to be changed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn"><span>Submit</span><i
+                                class="fa fa-lg  fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal Edit Order-->
+
+
+
+    <!-- Modal Send emails to friends -->
+    <div class="modal-share-ref modal-custom modal fade" id="EmailsToFriends" tabindex="-1" role="dialog"
+        aria-labelledby="EmailsToFriends" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left">Send emails to friends</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You can send the email to maximum 10 friends within 24 hours</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal">
+                        <span>
+                            Close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Send emails to friends -->
+
+    <!-- Modal Badge achieved-->
+    <div class="modal-custom modal fade show" id="ModalBadgeAchieved" tabindex="-1" role="dialog"
+        aria-labelledby="ModalBadgeAchieved" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+                <div class="modal-body">
+                    <h4>Badge achieved!</h4>
+                    <p class="popup-badges-bonus">You've earned $<span data-cost-badge=""></span>!</p>
+                    <div class="popup-badges-body">
+                        <div class="progress-ring" data-badges-name="">
+                            <div class="content"></div>
+                        </div>
+                    </div>
+                    <div class="popup-badges-name"></div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Cool</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal Badge achieved-->
+
+    <!-- Modal Rate Admin-->
+    <div class="modal-rate_admin modal-custom modal fade" id="ModalRateComment" tabindex="-1" role="dialog"
+        aria-labelledby="ModalRateComment" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-body">
+                        <p class="mb-3">Tell us more about what happened.</p>
+                        <div class="comment-wrap line-field-block">
+                            <textarea class="comment-edit rate-admin_textarea" name="rate_comment"
+                                placeholder="What I liked the least is...." rows='1'></textarea>
+                            <div class="alert-hint" style="display:none;" data-error="message_text">Please specify what
+                                needs to be changed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent"
+                            data-dismiss="modal"><span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn disabled-btn" disabled>
+                            <span>Submit</span><i style="display:none;"
+                                class="fa fa-lg fa-spinner fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal Rate Admin-->
+
+    <!-- NEW Modal Rate Admin-->
+    <div class="new-rate-modal modal-popup modal fade" id="ModalRatePaper" tabindex="-1" role="dialog"
+        aria-labelledby="ModalRatePaper" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100" id="exampleModalLongTitle">Rate your paper</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+
+
+                <form id="form_writer_rate" method="POST" class='validated_form'>
+                    <input type='hidden' name='id' value=''>
+                    <input type='hidden' name='auto_approve_order' value='' data-order="" data-writer=""
+                        data-time-ddl-left="" data-time-after-approve="" data-spacing="" data-pages="" data-vip=""
+                        data-type-of-paper-id="" data-except-pages="">
+                    <div class="modal-body">
+
+                        <div class="new-rate-writer">
+                            <div class="rating d-flex">
+                                <label>
+                                    <input type="radio" name="writer_rate" value="5" title="To infinity and beyond!"> 5
+                                </label>
+                                <label>
+                                    <input type="radio" name="writer_rate" value="4"
+                                        title="We strive for perfection. What could be better?"> 4
+                                </label>
+                                <label>
+                                    <input type="radio" name="writer_rate" value="3"
+                                        title="Average won’t do for us. What can be better?"> 3
+                                </label>
+                                <label>
+                                    <input type="radio" name="writer_rate" value="2"
+                                        title="D'oh! What should we improve?">
+                                    2
+                                </label>
+                                <label>
+                                    <input type="radio" name="writer_rate" value="1"
+                                        title="D'oh! What should we improve?">
+                                    1
+                                </label>
+                            </div>
+                            <div class="alert-msg-rate" data-writer-rate-msg="" style="display: none;">Outstanding</div>
+                        </div>
+
+                        <div class="improve-tip_holder" data-improve-rate="" style="display: none;">
+                            <div
+                                class="improve-items-holder flex-wrap justify-content-start justify-content-md-center w-100">
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-format" value="4">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-format">Format</label>
+                                </div>
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-sources" value="7">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-sources">Sources</label>
+                                </div>
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-grammar" value="10">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-grammar">Grammar</label>
+                                </div>
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-content" value="13">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-content">Content</label>
+                                </div>
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-plagiarism‎" value="16‎">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-plagiarism‎">Plagiarism‎</label>
+                                </div>
+                                <div class="improve-item-wrap">
+                                    <input class="improve-item form-check-input d-none" type="checkbox"
+                                        id="improve-punctuation" value="19">
+                                    <label class="improve-item-label form-check-label"
+                                        for="improve-punctuation">Punctuation</label>
+                                </div>
+                            </div>
+
+                            <div class="writers-tip_holder w-100">
+                                <div class="writers-tip_title">Tip your writer</div>
+                                <div class="writers-tip_inner d-flex flex-column flex-md-row flex-md-wrap">
+                                    <div class="writers-tip_btns d-flex align-items-center">
+                                        <button type="button" class="btn-tip-writer" data-toggle="button"
+                                            aria-pressed="false" autocomplete="off" data-tip-amount="5">$5
+                                        </button>
+                                        <button type="button" class="btn-tip-writer" data-toggle="button"
+                                            aria-pressed="false" autocomplete="off" data-tip-amount="10">$10
+                                        </button>
+                                        <button type="button" class="btn-tip-writer" data-toggle="button"
+                                            aria-pressed="false" autocomplete="off" data-tip-amount="15">$15
+                                        </button>
+                                    </div>
+                                    <div class="writers-tip_check position-relative d-flex">
+                                        <div class="text-custom-tip">Custom Amount</div>
+                                        <input class="input-tip-writer" type="text" name="tip-amount"
+                                            placeholder="0.00">
+                                    </div>
+                                    <div class="error-custom-tips" style="display:none;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-wrap" data-comment-rate="">
+                            <div class="comment-wrap-title mb-3 mb-md-4">
+                                <span data-comment-title="">What went wrong? We badly want to fix it!</span>
+                                <span class="optinal-item">(Optional)</span>
+                            </div>
+                            <textarea class="comment-area" name="feedback_writer"
+                                placeholder="Type more details here"></textarea>
+                            <div class="alert-required" style="display:none;" data-error="message_text">Please specify
+                                what
+                                needs to be changed.
+                            </div>
+                        </div>
+                        <div class="new_alert-block-rate" data-writer-rate-block-writer-msg="" style="display: none;">
+                            Let us correct it. Send your order for a
+                            <button type="button" class="btn-rate-block btn" onclick="
+                                    
+                                            $('#ModalRatePaper').off('hide.bs.modal');
+                                            $('#ModalRatePaper').modal('hide');
+                                            setTimeout(function () {
+                                                need_open_rate_modal = true;
+                                                $('#ModalSendRevision').modal('show');
+                                            }, 300);
+                                    
+                                            " data-add-writer-blacklist="" data-client-id="" data-order-id="">
+                                free revision
+                            </button>
+                            .
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent btn-modal-dismiss"
+                            data-dismiss="modal"><span>Rate later</span></button>
+                        <button type="button" class="btn-rate-disabled btn-custom yellow-btn"
+                            data-new-rate-submit><span>Submit</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END NEW Modal Rate Admin-->
+
+    <!-- Success Submit New Modal Rate Admin-->
+    <div class="modal-popup-rate modal-popup modal fade" id="ModalSuccessNewRate" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSuccessNewRate" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="emogi-rated-img" src="/public_new/build/img/Rate-emogi-sorry.svg" alt="" />
+                    <p class="text-center text-responsive">
+                        <span class="text-responsive-seccess">Sorry for letting you down.</span><br>
+                        Back to the drawing boards! We’ll do our best to improve.
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" onclick="clearTimeout(timeoutModal);"
+                        data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Success Submit New Modal Rate Admin-->
+
+    <!-- Success Submit Revision-->
+    <div class="modal-popup-rate modal-popup modal fade" id="ModalSuccessRevision" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSuccessRevision" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="emogi-rated-img" src="/public_new/build/img/Rate-emogi-revision.svg" alt="" />
+                    <p class="text-center">Your order <strong>has been sent for revision</strong>.<br> We'll let you
+                        know if
+                        we have any questions.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"
+                        onclick="location.reload();">
+                        <span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Success Submit Revision-->
+
+    <!-- Success Submit New Modal Rate Without Tips-->
+    <div class="modal-popup-rate modal-popup modal fade" id="ModalWithoutTips" tabindex="-1" role="dialog"
+        aria-labelledby="ModalWithoutTips" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="emogi-rated-img" src="/public_new/build/img/Rate-emogi-woohoo.svg" alt="" />
+                    <p class="text-center text-responsive"><span class="text-responsive-bold">Woohoo!</span><br> Your
+                        feedback is the best motivation.<br> Back to work!</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" onclick="clearTimeout(timeoutModal);"
+                        data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Success Submit New Modal Rate Without Tips-->
+    <!-- Success Submit New Modal Rate 4 strs-->
+    <div class="modal-popup-rate modal-popup modal fade" id="ModalSuccessRateStars" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSuccessRateStars" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="emogi-rated-img" src="/public_new/build/img/Rate-emogi-difference.svg" alt="" />
+                    <p class="text-center"> This really makes a difference.<br> Thanks!</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" onclick="clearTimeout(timeoutModal);"
+                        data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Success Submit New Modal Rate 4 strs-->
+
+    <!-- Success Submit New Modal Rate Comment-->
+    <div class="modal-popup modal fade" id="ModalSuccessRateComment" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSuccessRateComment" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center">Thank you for taking the time!</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Success Submit New Modal Rate 4 strs-->
+
+    <!-- Modal Pay Tips To Writer -->
+    <div class=" modal_pay-tips modal_paynow modal-custom modal fade" id="ModalPayTips" tabindex="-1" role="dialog"
+        aria-labelledby="ModaPayTips" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-pay-body d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+                        <div class="pay-tips-col">
+                            <form action="/payment" id="payment_form">
+                                <button type="button" class="close d-block" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                <div class="title_pay-tips text-center mb-3">Choose Payment Method</div>
+                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="bid">
+                                <input type="hidden" name="token">
+                                <input type="hidden" name="type_form" value="0">
+                                <input type="hidden" name="mcid" value="">
+                                <input type="hidden" name="moid" value="">
+                                <input type="hidden" name="mchid" value="3">
+                                <input type="hidden" name="mtid" value="4">
+                                <input type="hidden" name="from_admin" value="1">
+                                <input type="hidden" name="m">
+                                <div class="payment_card-desktop">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex d-md-none d-lg-none d-xl-none">
+                    <button type="button" class="btn-custom btn-transparent" data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal Pay Tips To Writer -->
+
+    <!-- Tip your writer -->
+    <div class="tip-writer_modal modal-custom modal fade" id="TipYourWriter" tabindex="-1" role="dialog"
+        aria-labelledby="TipYourWriter" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100">Tip your writer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="writers-tip_holder w-100">
+                        <input type='hidden' name='order_id' value=''>
+                        <div class="writers-tip_inner d-flex flex-column flex-md-row flex-md-wrap">
+                            <div class="writers-tip_btns d-flex align-items-center">
+                                <button type="button" class="btn-tip-writer" data-toggle="button" aria-pressed="false"
+                                    autocomplete="off" data-tip-amount="5">$5
+                                </button>
+                                <button type="button" class="btn-tip-writer" data-toggle="button" aria-pressed="false"
+                                    autocomplete="off" data-tip-amount="10">$10
+                                </button>
+                                <button type="button" class="btn-tip-writer" data-toggle="button" aria-pressed="false"
+                                    autocomplete="off" data-tip-amount="15">$15
+                                </button>
+                            </div>
+                            <div class="writers-tip_check position-relative d-flex">
+                                <div class="text-custom-tip">Custom Amount</div>
+                                <input class="input-tip-writer alert-control" type="text" name="tip-amount"
+                                    placeholder="0.00">
+                            </div>
+                            <div class="error-custom-tips" style="display:none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-custom btn-transparent btn-modal-dismiss"
+                        data-dismiss="modal"><span>Cancel</span>
+                    </button>
+                    <button type="button" class="btn-custom yellow-btn" data-pay-tip><span>Pay</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Tip your writer-->
+
+
+    <!-- Modal Add to my balance -->
+    <div class="modal_addtomybalance modal-custom modal fade" id="AddToMyBalance" tabindex="-1" role="dialog"
+        aria-labelledby="AddToMyBalance" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add to my balance</h5>
+                    <button type="button" class="close d-block" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>To use all the benefits of your wallet, enter the amount & proceed with the payment using a
+                        convenient payment method</p>
+                    <div class="payment-col">
+                        <form action="/payment?ajax=addBalance" id="add_balance_form" class="validated_form">
+                            <input type="hidden" name="token" value="14ef7883f5691e0450716814281ccadb">
+                            <input type="hidden" name="date" value="1654656978">
+                            <input type="hidden" name="mcid" value="">
+                            <input type="hidden" name="m" value="1">
+                            <div class="enter-amount">
+                                <div class="title">Enter amount</div>
+                                <div class="enter-amount_check position-relative d-flex line-field-block block_element">
+                                    <input class="input-enter-amount " type="text" name="balance" placeholder="100">
+
+                                </div>
+                                <div class="title">Or choose below</div>
+                                <div class="amount-row">
+                                    <div class="amount_btns d-flex align-items-center">
+                                        <button type="button" class="btn-amount btn-choose-balance" data-balance="50"
+                                            data-toggle="button" aria-pressed="false" autocomplete="off"
+                                            data-tip-amount="50">$50
+                                        </button>
+                                        <button type="button" class="btn-amount btn-choose-balance" data-balance="100"
+                                            data-toggle="button" aria-pressed="false" autocomplete="off"
+                                            data-tip-amount="100">$100
+                                        </button>
+                                        <button type="button" class="btn-amount btn-choose-balance" data-balance="200"
+                                            data-toggle="button" aria-pressed="false" autocomplete="off"
+                                            data-tip-amount="200">$200
+                                        </button>
+                                        <button type="button" class="btn-amount btn-choose-balance" data-balance="500"
+                                            data-toggle="button" aria-pressed="false" autocomplete="off"
+                                            data-tip-amount="500">$500
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="amount-size-info">Maximum transaction limit is $500</div>
+                            </div>
+                            <div class="payment_card-desktop">
+                                <div class="payment_card_list d-flex justify-content-between only-card_payment ">
+                                    <div class="payment_card payment_method_box" data-add-balance-form-submit=""
+                                        data-payment-method="1">
+                                        <div class="payment_method payment_method_by_card">Pay by Card</div>
+                                        <div class="payment_method_details">Insert your card details</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form id="hidden_add_balance_form_submit" action="" method="POST"></form>
+                        <button type="button" data-counter="wallet_add_balance_submit" class="statistic_send"
+                            style="display:none"></button>
+                        <div class="amount-info">The amount of replenishment is intended net of any taxes. You may be
+                            required to pay certain taxes depending on your residency or location (for example, VAT in a
+                            member country of the European Union). These taxes will be added to fees billed to you, if
+                            applicable.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Add to my balance -->
+
+    <!-- Success Add to my balance-->
+    <div class="modal-popup modal fade" id="ModalSuccessBalance" tabindex="-1" role="dialog"
+        aria-labelledby="ModalSuccessBalance" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-responsive">
+                        <span class="text-responsive-seccess">Success!</span>
+                        You've added $50 to your balance
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" onclick="clearTimeout(timeoutModal);"
+                        data-dismiss="modal"><span>Okay</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Success Add to my balance-->
+
+    <!-- Package course Modal -->
+    <div class="modal-package_course attachment-mbl_new modal-attachment modal-log-auth modal-custom modal fade"
+        id="ModalPackageCourse" tabindex="-1" role="dialog" aria-labelledby="ModalPackageCourse" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="package_course_form" method="post" class="validated_form">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalPackageCourseTitle">Provide course syllabus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="package_course-hint mb-3">Upload course syllabus with deadlines and we’ll place orders
+                            for
+                            all assignments to be done. You only need to check them, submit, and subscribe for an
+                            automatic
+                            payment. </p>
+                        <div class="alert-info-package">All orders go with 10% off and the amount for each one will be
+                            charged ahead of time. You’ll get the completed orders before your submission.
+                        </div>
+                        <div class="form-group-border block_element">
+                            <div class="alert-info" style="display: none">Make sure to provide course title,
+                                description,
+                                and phone number.
+                            </div <p class="mb-2"><b>Course Title </b></p>
+                            <input class="input-control" type="text" name="topic" value="" id="package_course_title"
+                                placeholder="Type course name here">
+                        </div>
+                        <div class="form-group-border drop-files-holder block_element">
+                            <p class="mb-2"><b>Add files</b></p>
+                            <div class="mb-3">Upload files with syllabus here (images are fine too).</div>
+                            <input type="file" name="files[]" id="file_input_package_course" multiple="multiple"
+                                style="opacity: 0" />
+                            <div class="attach-size-error attachment-error" style="display:none;">1 or more attachments
+                                failed.
+                            </div>
+                            <div class="drop-files--extended__container ">
+                                <div class="drop-files--extended__inner">
+                                    <label class="btn btn-default btn-file"
+                                        for="file_input_package_course"><span>Browse</span>
+                                    </label>
+                                    <div class="drop-files--or">or</div>
+                                    <div class="drop-files--text drop-files--text-mobile">
+                                        <div class="d-none d-lg-block d-md-block d-xl-block">Drag and drop files here
+                                        </div>
+                                        <span>The file size limit is 100 Mb per file.</span>
+                                    </div>
+                                </div>
+                                <div role="presentation" class="files-upload__wrapper" style="display:none;"></div>
+                            </div>
+                            <div class="fileload-container scroll-pane">
+                                <div class="error-files"></div>
+                                <div class="valid-files"></div>
+                            </div>
+                        </div>
+                        <div class="form-group-border block_element">
+                            <p class="mb-2"><b>Phone Number</b></p>
+                            <div class="mb-3 modal-phone-hint">Let us know a phone number we can reach you at. Just to
+                                clarify details or send sms when all orders have been placed.
+                            </div>
+                            <div class="form-group-inner block_element">
+                                <div class="input-phone-inner">
+                                    <input id="input_phone" name="phone" type="text" data-value="" value=""
+                                        class="input-control" placeholder="(000) 000 - 0000">
+                                    <div class="phone-box filter-single-wrap">
+                                        <select id="select-country" class="select2-phone" name="country"
+                                            data-attr-current-country=""></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-border comment-wrap">
+                            <div class="comment-wrap-title mb-3 d-flex align-items-center">
+                                <p class="my-0"><b>Comments</b></p>
+                                <span class="optinal-item my-0 ml-1">(Optional)</span>
+                            </div>
+                            <textarea class="comment-area" name="paper_details"
+                                placeholder="Leave comments here. Mention everything we should pay close attention to."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-custom btn-transparent" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn-custom submit_btn yellow-btn disabled"><span>Submit</span><i
+                                class="fa fa-lg fa-spin"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Package course Modal -->
+
+    <!-- Success Package course Modal-->
+    <div class="modal-popup modal fade" id="ModalPackageCourseSuccess" tabindex="-1" role="dialog"
+        aria-labelledby="ModalPackageCourseSuccess" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPackageCourseSuccessTitle">We received your request! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        After we process it, you’ll get an email or sms to the phone number you’ve mentioned earlier.
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Got
+                            it</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Success Package course Modal-->
+
+    <!-- Error Package course Modal-->
+    <div class="modal-popup modal fade" id="ModalPackageCourseError" tabindex="-1" role="dialog"
+        aria-labelledby="ModalPackageCourseError" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPackageCourseErrorTitle">Oops, an error occurred! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Please double-check the card details you have entered and try again.
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Error Package course Modal-->
+
+    <!-- Second Appoval Package course Modal-->
+    <div class="modal-popup modal fade" id="ModalPackageCourseError" tabindex="-1" role="dialog"
+        aria-labelledby="ModalPackageCourseError" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPackageCourseErrorTitle">Great!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Thank you for approving the details of your order.
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Second Appoval Package course Modal-->
+
+    <!-- Second Appoval Package course Modal-->
+    <div class="modal-popup modal fade" id="ModalPackageCancelSubscription" tabindex="-1" role="dialog"
+        aria-labelledby="ModalPackageCancelSubscription" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPackageCancelSubscriptionTitle">Cancel subscription? </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Writer will be assigned only after payment. Are you sure you want to cancel it?
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" data-dismiss="modal"><span>Done</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Second Appoval Package course Modal-->
+
+    <!-- Iframe cards Package course Modal -->
+    <div class="modal-custom modal fade" id="ModalPackagePayment" tabindex="-1" role="dialog"
+        aria-labelledby="ModalPackagePayment" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100">Your Payment Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Something went wrong
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END Iframe cards Package course Modal -->
+
+
+    <!-- Send files to email -->
+    <div class="attachment-mbl_new modal-attachment modal-log-auth modal-custom modal fade" id="sendFile" tabindex="-1"
+        role="dialog" aria-labelledby="sendFile" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="form-files" method="post" class="validated_form">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalPackageCourseTitle">Send files to email</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="error"><span>Select the file(s)</span> you want to send to your email</p>
+                        <div class="scroll-pane">
+                            <table class="files-list-box table" data-filter="found-files">
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Final</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                        <div class="file-new">New</div>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox error"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Final</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="" data-file-id="20133197" data-sender-type="3">
+                                    <td class="checked-upload">
+                                        <div class="custom-checkbox"></div>
+                                    </td>
+                                    <td class="file-info">
+                                        <div class="file-name">Notes_from_Writer..v2.pdf</div>
+                                        <div class="file-desc">
+                                            <span class="file-date">Aug 24, 2019 15:30 PM</span> | <span
+                                                class="file-size">20 KB</span>
+                                        </div>
+                                        <div class="file-type">Sources</div>
+                                    </td>
+                                    <td class="file-download">
+                                        <button type="button" class="file-download-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.224 11 15 11.224 15 11.5V15H1V11.5C1 11.224 0.776 11 0.5 11C0.224 11 0 11.224 0 11.5V15.5C0 15.776 0.224 16 0.5 16H15.5C15.776 16 16 15.776 16 15.5V11.5C16 11.224 15.776 11 15.5 11Z"
+                                                    fill="#4C4C4C" />
+                                                <path
+                                                    d="M7.63541 11.8535C7.82991 12.046 8.15541 12.048 8.34991 11.8535L11.8494 8.4035C12.0469 8.208 12.0464 7.8915 11.8494 7.6965C11.6524 7.501 11.3324 7.501 11.1354 7.6965L8.49791 10.2965V0.5C8.49791 0.224 8.27191 0 7.99291 0C7.71391 0 7.48791 0.224 7.48791 0.5V10.2965L4.85041 7.6965C4.65291 7.501 4.33341 7.501 4.13641 7.6965C3.93891 7.892 3.93891 8.2085 4.13641 8.4035L7.63541 11.8535Z"
+                                                    fill="#4C4C4C" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="error-block">The total file size limit is 50 Mb.</div>
+                        <div class="button-block">
+                            <button type="button" class="btn-custom btn-transparent"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn-custom submit_btn yellow-btn disabled"><span>Send</span><i
+                                    class="fa fa-lg fa-spin"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END Send files to email -->
+
+    <!-- Send files to email Done -->
+    <div class="modal-popup modal fade" id="sendFileDone" tabindex="-1" role="dialog" aria-labelledby="sendFileDone"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-responsive-seccess">Done!</div>
+                    <p class="text-responsive">
+                        You've sent the selected file(s) to <span class="client-email">client@mail.com</span>.<br>
+                        Please check your spam folder or contact our Support Agents to change your email (if needed).
+                    </p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn-custom yellow-btn" onclick="clearTimeout(timeoutModal);"
+                        data-dismiss="modal"><span>Ok</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Send files to email Done -->
+
+
+
+
+
+    <script id='error-alert'
+        type='text/x-jsmart-tmpl'><div class="alert-hint" error="{$error_id}"> <strong>{$strong} </strong>{$text}</div></script>
+
+
+</body>
+
+</html>

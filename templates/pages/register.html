@@ -1,0 +1,744 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+
+
+
+
+
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K8P3GKQ');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0;">
+
+    <link rel="apple-touch-icon"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/apple-touch-icon.png?v=1654615028">
+
+    <title>Auth</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon.ico"
+        type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://admin.writemyessays.net/public_new/build/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="https://admin.writemyessays.net/public_new/build/img/favicon/safari-pinned-tab.svg"
+        color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/build/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/build/css/select2.min.css?v=1654615028">
+    <link rel="stylesheet"
+        href="https://admin.writemyessays.net/public_new/build/datetimepicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+        href="https://admin.writemyessays.net/public_new/build/js/libs/jscrollpane/jquery.jscrollpane.css">
+
+    <link rel="stylesheet" href="https://admin.writemyessays.net/public_new/css_new/styles.css?v=1654615028">
+
+
+
+    <script type="text/javascript">
+        var TITLE_CTRL = 'auth';
+        var CURRENT_USER = null;
+        var OFFICE_IP = false;
+        var SINGLE_PAYMENT_METHOD = false;
+        var MOBILE_APP_PAY_DISALLOW = false;
+        var MOBILE_APP = false;
+        var MESSAGE_LENGTH = 100;
+
+
+
+
+
+        var new_rating = false;
+    </script>
+
+    <script type="text/javascript"> localStorage.clear();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="google-site-verification" content="UJrWpnB_xghCOvFgPcc_i-G9" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="869489869275-u142vn8l6l8mf2e43ftpk7l2ak0lhbcv.apps.googleusercontent.com">
+
+
+
+
+    <script>var crypto_pay = false;</script>
+</head>
+
+<body class="page-top">
+
+
+
+
+
+
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8P3GKQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="circle-preloader-wrap hide-spinner" id="page-preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <div class="auth-fluid container-fluid ">
+            <div class="row auth-wrapper">
+                <div class="main-holder col-12">
+
+                    <div class="header-row row justify-content-between align-items-center">
+                        <div class="logo-item">
+                            <a href="https://writemyessays.net">
+                                <img src="https://admin.writemyessays.net/public_new/build/img/logo.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-row row justify-content-center">
+                        <div id="log-in" class="registration center-holder row">
+                            <!-- <div class="content-part col">
+                                <div class="bold-title">Join us!</div>
+                                <div class="sub-title-hint">Hundred thousands of students achieve goals with
+                                    WriteMyEssays.net!</div>
+                            </div> -->
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <form id="registration_form" data-phone-valid-by-country="true"
+                                            class="form-auth w-100 validated_form" method="post">
+                                            <input type="text" class="d-none" name="registration" value="">
+                                            <input class="form-element" type="hidden" name="timezone">
+                                            <input type='hidden' name="target" value="orders">
+                                            <input class="form-element" type="hidden" name="last_name"
+                                                value="novalidate">
+                                            <input type="hidden" name="token" value="5c4588163523f342e4a52619d3717643">
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_name">
+                                                        Name
+                                                        <img class="img-tooltip " src="" data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Please leave your real name or nickname that we can use to welcome you on our website."
+                                                            alt="" />
+                                                    </label>
+                                                    <div class="optinal-hint">(Optional)</div>
+                                                </div>
+                                                <input type="text" class="input-control " name="first_name"
+                                                    id="input_name" placeholder="Type your name"
+                                                    data-wmes-tst="reg-frst_name">
+                                            </div>
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_email">
+                                                        Email
+                                                    </label>
+                                                </div>
+                                                <input type="email" name="email" class="input-control " id="input_email"
+                                                    placeholder="Type your email" data-wmes-tst="reg-eml">
+                                            </div>
+
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_phone">
+                                                        Phone
+                                                    </label>
+                                                    <div class="optinal-hint">(Optional)</div>
+                                                </div>
+                                                <div class="input-phone-inner">
+                                                    <input id="input_phone" name="phone_number" type="tel"
+                                                        class="input-control " placeholder="(000) 000 - 0000"
+                                                        data-wmes-tst="reg-phn">
+                                                    <div class="phone-box filter-single-wrap">
+                                                        <select id="select-country" class="select2-phone" name="country"
+                                                            data-attr-current-country="KE"></select>
+                                                    </div>
+                                                    <div class="block-error"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group form-check block_element">
+                                                <input type="checkbox" name="proceed" class="form-check-input"
+                                                    data-wmes-tst="reg-agree-gdpr">
+                                                <label class="form-check-label ">
+                                                    <div class="form-check-text">
+                                                        I have read and agree to the
+                                                        <a target="_blank" href="">Terms of Use</a> and
+                                                        <a target="_blank" href="">Privacy</a>
+                                                    </div>
+                                                </label>
+                                                <div class="block-error"></div>
+                                            </div>
+
+
+                                            <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                                <button type="submit" data-wmes-tst="reg-rgstr-btn"
+                                                    class="btn-custom yellow-btn">register
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                        <div class="change-option-box w-100">
+                                            <div class="change-option-inner">
+                                                Already have an account?
+                                                <span class="btn-form go-login-btn">Log in</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="forgot_password" class="forgot_password-box center-holder row" style="display: none;">
+                            <div class="content-part col">
+                                <div class="bold-title">No panic!</div>
+                                <div class="sub-title-hint">Let’s recover your password in no time!</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <span
+                                            class="back-btn d-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex">back</span>
+                                        <div class="forgot-hint w-100">Enter your email and <br> we’ll send the
+                                            instructions.
+                                        </div>
+                                        <form id="form_recovery_password" class="form-auth w-100 validated_form"
+                                            action="" method="post">
+                                            <div class="form-group block_element">
+                                                <div class="label-group d-flex justify-content-between">
+                                                    <label for="input_email_forgot">
+                                                        Email
+                                                    </label>
+                                                </div>
+                                                <input type="email" name="email" class="input-control "
+                                                    id="input_email_forgot" placeholder="Type your email">
+                                            </div>
+
+                                            <div class="btn-form-box w-100 d-flex align-items-center flex-column">
+                                                <button type="submit"
+                                                    class="btn-forgot btn-custom yellow-btn">SEND</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="change-option-box w-100">
+                                        <div class="change-option-inner">
+                                            Don’t have an account?
+                                            <span class="btn-form go-reg-btn">Register now</span>
+                                        </div>
+                                    </div>
+                                    <span class="back-btn d-flex d-md-none d-lg-none d-xl-none">back</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="forgot_success" class="forgot_success-box center-holder row" style="display: none;">
+                            <div class="content-part col">
+                                <div class="bold-title">No panic!</div>
+                                <div class="sub-title-hint">Let’s recover your password in no time!</div>
+                            </div>
+
+                            <div class="aside-holder">
+                                <div class="aside-holder-bg w-100">
+                                    <div class="aside-holder-inner w-100">
+                                        <div class="aside-inner">
+                                            <img class="rocker-success"
+                                                src="/public_new/build/img/paper-help-check-01.png" alt="" />
+                                            <div class="recovery-link-box">Password recovery email<br> has been sent to
+                                                <span class="email-recovery email-address-value"></span>
+                                            </div>
+                                            <button type="button" class="recovery-btn btn-transparent btn-custom">DONE
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="change-option-box w-100">
+                                        <div class="change-option-inner">
+                                            Didn’t receive the email yet?<br><span class="btn-form go-resend-btn">Resend
+                                            </span> the email.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="footer-item row" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scripts -->
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/jquery.min.js?v=1"></script>
+    <script defer type="text/javascript" src="/public_new/build/js/jquery.cookie.js?ver=1654615028"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/popper.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/bootstrap.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/select2.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/datetimepicker/moment.js"></script>
+    <script defer
+        src="https://admin.writemyessays.net/public_new/build/datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script defer type="text/javascript" src="/public_new/js/smart.min.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/ajaxList.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/assets/js/ajax.js?ver=1654615028"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/select2_contrycode.js"></script>
+
+    <script defer type="text/javascript" src="/public_new/js/jquery.validate.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/jquery.validate.custom.js?ver=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/js/form_validator.js?ver=16546150281654657048"></script>
+    <script defer type="text/javascript"
+        src="/public_new/assets/js/form_validator_custom.js?ver=16546150281654657048"></script>
+    <script defer type="text/javascript" src="/public_new/js/data_layer.js?ver=1654615028"></script>
+    <script defer
+        src="https://admin.writemyessays.net/public_new/build/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/owl.carousel.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js"></script>
+    <!-- <script defer src="https://admin.writemyessays.net/public_new/build/js/libs/fingerprint_v3.js"></script>  -->
+    <script defer src="https://admin.writemyessays.net/public_new/assets/js/balance.js?v=1654657048"></script>
+    <script defer src="https://admin.writemyessays.net/public_new/assets/js/main.js?v=1654615028"></script>
+    <script defer type="text/javascript" src="/public_new/assets/js/auth.js?ver=16546150281654657048"></script>
+
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5b45dd666d961556373d9ca2/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script id='error-alert' type='text/x-jsmart-tmpl'><div class="alert-hint" 
+        error="{$error_id}"> <strong>{$strong} </strong>{$text}</div>
+    </script>
+</body>
+
+</html>
+
+
+
+{% extends 'pages/main_base.html' %}
+
+
+
+{% block content %}
+
+<section class="section section-hero-home">
+    <div class="container">
+        <div class="section-hero-home__content">
+            <h1 class="section__title">Top academic writers at your service 24/7</h1>
+            <p class="section__subtitle">Each of our essay writers passes 3 rounds of tests to offer you
+                original and quality paper even within 4 or 8 hours</p>
+            <div class="section__buttons">
+                <a href="" rel="nofollow" class="btn btn--green-fill btn--with-arrow">Order now</a>
+                <a href="" rel="nofollow" class="link--white">Get a free quote</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-calculator">
+    <div class="container">
+        <div class="section-calculator__calculator ">
+            <h2 class="section-calculator__heading">Calculate the price of your order</h2>
+            <p class="section-calculator__subheading">Enter your paper details and see how much it will cost to
+                hire our professional academic writers.</p>
+            <div class="Calculator" data-calc-mini data-calculator-default>
+
+                <form name="calc" class="Calc" method="post" action="" data-calculator-form>
+                    <select name="topcatId" style="display: none;" data-discipline-select></select>
+                    <div class="Calc__wrapper">
+                        <div class="Calc__cell Calc__cell--type-of-paper">
+                            <div class="Calc__select select">
+                                <select id="calc-type-of-paper" name="paperTypeId" data-academic-level-select>
+                                    <option value="2" selected="">Essay (any type)</option>
+                                </select>
+                                <label for="calc-type-of-paper" class="Calc__label">Type of paper</label>
+                            </div>
+                        </div>
+
+                        <div class="Calc__cell Calc__cell--academic-level">
+                            <div class="visible-in-mobile">
+                                <div class="Calc__select select">
+                                    <select id="calc-academic-level" data-academic-level-select-mobile>
+                                        <option value="">Undergrad. (yrs 1-2)</option>
+                                    </select>
+                                    <label for="calc-academic-level" class="Calc__label">Academic level</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Calc__cell Calc__cell--pages">
+                            <label class="Calc__label">Pages <span class="CalcFull__label-item-words" data-words-qty>550
+                                    words</span></label>
+                            <span class="Calc__pages">
+                                <label class="Calc__pages-btn CalcFull__pages-left" for="pageDecrease">
+                                    <button id="pageDecrease" type="button" data-minus-button
+                                        aria-label="decrease"></button>
+                                </label>
+                                <label class="Calc__pages-input" for="pages">
+                                    <input class="input" type="number" inputmode="numeric" id="pages" name="pages"
+                                        data-pages-input value="1">
+                                </label>
+                                <label class="Calc__pages-btn CalcFull__pages-right" for="pageIncrease">
+                                    <button id="pageIncrease" type="button" data-plus-button
+                                        aria-label="increase"></button>
+                                </label>
+                            </span>
+                        </div>
+                        <div class="Calc__total">
+                            <div class="Calc__total-value">Price: <span data-total-price><span>$</span>0</span>
+                            </div>
+                        </div>
+                        <div class="Calc__submit">
+                            <button class="btn btn--green-fill" type="submit" data-submit-button>Continue to
+                                order
+                            </button>
+                        </div>
+                    </div>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="order">
+                </form>
+
+                <form name="calc" class="Calc" method="post" action="" data-calculator-form>
+                    <select name="topcatId" style="display: none;" data-discipline-select></select>
+                    <div class="Calc__wrapper">
+                        <div class="Calc__cell Calc__cell--type-of-paper">
+
+                            <div class="Calc__select select">
+                                <select id="calc-type-of-paper" name="paperTypeId" data-academic-level-select>
+                                    <option value="2" selected="">Essay (any type)</option>
+                                </select>
+                                <label for="calc-type-of-paper" class="Calc__label">Type of paper</label>
+                            </div>
+
+                        </div>
+
+                        <div class="Calc__cell Calc__cell--academic-level">
+                            <div class="visible-in-mobile">
+                                <div class="Calc__select select">
+                                    <select id="calc-academic-level" data-academic-level-select-mobile>
+                                        <option value="">Undergrad. (yrs 1-2)</option>
+                                    </select>
+                                    <label for="calc-academic-level" class="Calc__label">Academic level</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Calc__cell Calc__cell--pages">
+                            <label class="Calc__label">Pages <span class="CalcFull__label-item-words" data-words-qty>550
+                                    words</span></label>
+                            <span class="Calc__pages">
+                                <label class="Calc__pages-btn CalcFull__pages-left" for="pageDecrease">
+                                    <button id="pageDecrease" type="button" data-minus-button
+                                        aria-label="decrease"></button>
+                                </label>
+                                <label class="Calc__pages-input" for="pages">
+                                    <input class="input" type="number" inputmode="numeric" id="pages" name="pages"
+                                        data-pages-input value="1">
+                                </label>
+                                <label class="Calc__pages-btn CalcFull__pages-right" for="pageIncrease">
+                                    <button id="pageIncrease" type="button" data-plus-button
+                                        aria-label="increase"></button>
+                                </label>
+                            </span>
+                        </div>
+                        <div class="Calc__total">
+                            <div class="Calc__total-value">Price: <span data-total-price><span>$</span>0</span>
+                            </div>
+                        </div>
+                        <div class="Calc__submit">
+                            <button class="btn btn--green-fill" type="submit" data-submit-button>Continue to
+                                order
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="section-calculator__info">
+            <div class="section-calculator__info-col">
+                <div class="h4 section-calculator__info-title">The price includes:</div>
+                <ul class="list--clean list--check-green">
+                    <li>Free title page and bibliography</li>
+                    <li>Formatting according to your instructions</li>
+                    <li>Amendments to the finished paper if they are needed</li>
+                </ul>
+            </div>
+            <div class="section-calculator__info-col">
+                <div class="h4 section-calculator__info-title">What else you can get:</div>
+                <ul class="list--clean list--check-green">
+                    <li>Choice of 3 categories of writers</li>
+                    <li>Copies of the sources in the bibliography</li>
+                    <li>Charts, images, and PowerPoint slides</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-guarantees ">
+    <div class="container">
+        <h2 class="h2 section__title">Our guarantees</h2>
+        <ul class="section-guarantees__list list--clean">
+
+            <li class="section-guarantees__item ico__document--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Zero-plagiarism guarantee</div>
+                <div class="section-guarantees__item-text">We write custom papers based on the instructions you
+                    give us, so we provide exclusively original content.</div>
+            </li>
+
+
+            <li class="section-guarantees__item ico__circle-write--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Free revisions</div>
+                <div class="section-guarantees__item-text">Is there a problem with your paper? We’ll quickly fix
+                    it and send you the edited version.</div>
+            </li>
+
+
+            <li class="section-guarantees__item ico__save-money--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Money-back guarantee</div>
+                <div class="section-guarantees__item-text">We make sure you get high-quality essay help, and if
+                    you don’t, we’ll give you a refund.</div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section class="section section-samples">
+    <div class="container">
+        <div class="section-samples__content">
+            <h2 class="section__title">Samples from our advanced writers</h2>
+            <p class="section__subtitle">Check out some works from our best essay writers before your place an
+                order. They
+                will help you better understand what our service can do for you.</p>
+            <ul class="section-samples__list list--clean">
+                <li>
+                    <button type="button" class="section-samples__item active" data-sample-link="Nursing"
+                        data-observed-bg>Nursing</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Business studies"
+                        data-observed-bg>Business studies</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="English 101"
+                        data-observed-bg>English 101</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Education"
+                        data-observed-bg>Education</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Psychology"
+                        data-observed-bg>Psychology</button>
+                </li>
+            </ul>
+        </div>
+        <div class="section-samples__viewer">
+            <div class="sample show" data-sample="Nursing">
+                <div class="sample__title">Houston and Kindred Hospital Case Study</div>
+                <div class="sample__type">Case study</div>
+                <div class="sample__description">A case study requires you to examine a particular phenomenon in
+                    a real-world context. The goal of this assignment is to describe and understand this
+                    situation, identify the key issues, and link them to relevant theoretical concepts.</div>
+                <div class="sample__link">
+                    <a href="/samples/home-wcs-5188/2-Healthcare-Case-study-APA-proof.pdf" class="btn btn--green-fill"
+                        target="_blank" data-observed-bg>View this
+                        sample</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-banner section-banner-black">
+    <div class="container">
+        <div>
+            <h2 class="section__title section-banner__title" data-observed-bg>Enjoy expert assistance with our
+                pro essay writing service</h2>
+        </div>
+        <div class="section-banner__button">
+            <a href="/order.html" rel="nofollow" class="btn btn--white-fill btn--with-arrow">Order now</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-howitworks ">
+    <div class="container">
+        <h2 class="section__title">How it works</h2>
+        <p class="section__subtitle">Using our online essay writing service is very easy. You just have to
+            follow these steps:</p>
+        <ol class="section-howitworks__list list--clean">
+
+            <li>
+                <div class="section-howitworks__item-title">Place your order</div>
+                <div class="section-howitworks__item-text">First, give us your instructions and explain what
+                    type of academic writing help you need. Then, provide your contact details so that we can
+                    get in touch.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Pay for your paper</div>
+                <div class="section-howitworks__item-text">Enter your credit card details and follow the
+                    directions. We use data encryption and only work with trusted e-payment providers for your
+                    extra safety.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Track your order</div>
+                <div class="section-howitworks__item-text">While you wait for your paper to be ready, you can
+                    check out the status of your order, chat with your essay writer and ask our customer support
+                    for updates.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Download the file</div>
+                <div class="section-howitworks__item-text">We’ll send you a notification when your
+                    custom-written paper is ready. Check it out in your profile, approve the order, and download
+                    the file to your device.</div>
+            </li>
+
+        </ol>
+        <div class="section-howitworks__btn">
+            <a href="/order.html" rel="nofollow" class="btn btn--green-fill btn--with-arrow">To the order
+                form</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-benefits ">
+    <div class="container">
+        <h2 class="section__title">Discover the benefits of our service</h2>
+        <p class="section__subtitle">The main reason to choose our professional essay writing services is that
+            we aim to please even the most demanding customers. Here’s what we offer.</p>
+        <ul class="section-benefits__list list--clean columns columns--col-3">
+
+            <li class="section-benefits__item ico__support--before" data-observed-bg>
+                <div class="section-benefits__item-title">24/7 customer service</div>
+                <div class="section-benefits__item-text">Our operators are always ready to help you if you have
+                    any questions.</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__timer--before" data-observed-bg>
+                <div class="section-benefits__item-title">Short deadlines</div>
+                <div class="section-benefits__item-text">Our writing service can help you with urgent
+                    assignments in just 4 hours!</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__pig--before" data-observed-bg>
+                <div class="section-benefits__item-title">Flexible prices</div>
+                <div class="section-benefits__item-text">Order in advance and get essay writing help at a lower
+                    price!</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__confidentiality--before" data-observed-bg>
+                <div class="section-benefits__item-title">Confidentiality</div>
+                <div class="section-benefits__item-text">We don’t publicly disclose any information you share
+                    with us.</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__note-and-pen--before" data-observed-bg>
+                <div class="section-benefits__item-title">Free formatting</div>
+                <div class="section-benefits__item-text">We’ll make your paper look exactly how you want it to.
+                </div>
+            </li>
+
+
+            <li class="section-benefits__item ico__lists--before" data-observed-bg>
+                <div class="section-benefits__item-title">75+ disciplines</div>
+                <div class="section-benefits__item-text">Our paper writers cover an impressive range of
+                    subjects.</div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section class="section section-banner section-banner-green">
+    <div class="container">
+        <div>
+            <h2 class="section__title section-banner__title" data-observed-bg>Get all the writing help you need
+                with our professional essay service</h2>
+        </div>
+        <div class="section-banner__button">
+            <a href="/order.html" rel="nofollow" class="btn btn--white-fill btn--with-arrow">Order now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

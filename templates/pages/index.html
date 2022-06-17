@@ -1,0 +1,262 @@
+{% extends 'pages/main_base.html' %}
+
+
+
+{% block content %}
+
+<section class="section section-hero-home">
+    <div class="container">
+        <div class="section-hero-home__content">
+            <h1 class="section__title">Top academic writers at your service 24/7</h1>
+            <p class="section__subtitle">Each of our essay writers passes 3 rounds of tests to offer you
+                original and quality paper even within 4 or 8 hours</p>
+            <div class="section__buttons">
+                <a href="" rel="nofollow" class="btn btn--green-fill btn--with-arrow">Order now</a>
+                <a href="" rel="nofollow" class="link--white">Get a free quote</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-calculator">
+    <div class="container">
+        <div class="section-calculator__calculator ">
+            <h2 class="section-calculator__heading">Calculate the price of your order</h2>
+            <p class="section-calculator__subheading">Enter your paper details and see how much it will cost to
+                hire our professional academic writers.</p>
+            <div class="Calculator" data-calc-mini data-calculator-default>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="Calc__submit">
+                        <button class="btn btn--green-fill" type="submit">
+                            Continue to order
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="section-calculator__info">
+            <div class="section-calculator__info-col">
+                <div class="h4 section-calculator__info-title">The price includes:</div>
+                <ul class="list--clean list--check-green">
+                    <li>Free title page and bibliography</li>
+                    <li>Formatting according to your instructions</li>
+                    <li>Amendments to the finished paper if they are needed</li>
+                </ul>
+            </div>
+            <div class="section-calculator__info-col">
+                <div class="h4 section-calculator__info-title">What else you can get:</div>
+                <ul class="list--clean list--check-green">
+                    <li>Choice of 3 categories of writers</li>
+                    <li>Copies of the sources in the bibliography</li>
+                    <li>Charts, images, and PowerPoint slides</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-guarantees ">
+    <div class="container">
+        <h2 class="h2 section__title">Our guarantees</h2>
+        <ul class="section-guarantees__list list--clean">
+
+            <li class="section-guarantees__item ico__document--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Zero-plagiarism guarantee</div>
+                <div class="section-guarantees__item-text">We write custom papers based on the instructions you
+                    give us, so we provide exclusively original content.</div>
+            </li>
+
+
+            <li class="section-guarantees__item ico__circle-write--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Free revisions</div>
+                <div class="section-guarantees__item-text">Is there a problem with your paper? We’ll quickly fix
+                    it and send you the edited version.</div>
+            </li>
+
+
+            <li class="section-guarantees__item ico__save-money--before" data-observed-bg>
+                <div class="section-guarantees__item-title">Money-back guarantee</div>
+                <div class="section-guarantees__item-text">We make sure you get high-quality essay help, and if
+                    you don’t, we’ll give you a refund.</div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section class="section section-samples">
+    <div class="container">
+        <div class="section-samples__content">
+            <h2 class="section__title">Samples from our advanced writers</h2>
+            <p class="section__subtitle">Check out some works from our best essay writers before your place an
+                order. They
+                will help you better understand what our service can do for you.</p>
+            <ul class="section-samples__list list--clean">
+                <li>
+                    <button type="button" class="section-samples__item active" data-sample-link="Nursing"
+                        data-observed-bg>Nursing</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Business studies"
+                        data-observed-bg>Business studies</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="English 101"
+                        data-observed-bg>English 101</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Education"
+                        data-observed-bg>Education</button>
+                </li>
+                <li>
+                    <button type="button" class="section-samples__item " data-sample-link="Psychology"
+                        data-observed-bg>Psychology</button>
+                </li>
+            </ul>
+        </div>
+        <div class="section-samples__viewer">
+            <div class="sample show" data-sample="Nursing">
+                <div class="sample__title">Houston and Kindred Hospital Case Study</div>
+                <div class="sample__type">Case study</div>
+                <div class="sample__description">A case study requires you to examine a particular phenomenon in
+                    a real-world context. The goal of this assignment is to describe and understand this
+                    situation, identify the key issues, and link them to relevant theoretical concepts.</div>
+                <div class="sample__link">
+                    <a href="/samples/home-wcs-5188/2-Healthcare-Case-study-APA-proof.pdf" class="btn btn--green-fill"
+                        target="_blank" data-observed-bg>View this
+                        sample</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section section-banner section-banner-black">
+    <div class="container">
+        <div>
+            <h2 class="section__title section-banner__title" data-observed-bg>Enjoy expert assistance with our
+                pro essay writing service</h2>
+        </div>
+        <div class="section-banner__button">
+            <a href="/order.html" rel="nofollow" class="btn btn--white-fill btn--with-arrow">Order now</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-howitworks ">
+    <div class="container">
+        <h2 class="section__title">How it works</h2>
+        <p class="section__subtitle">Using our online essay writing service is very easy. You just have to
+            follow these steps:</p>
+        <ol class="section-howitworks__list list--clean">
+
+            <li>
+                <div class="section-howitworks__item-title">Place your order</div>
+                <div class="section-howitworks__item-text">First, give us your instructions and explain what
+                    type of academic writing help you need. Then, provide your contact details so that we can
+                    get in touch.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Pay for your paper</div>
+                <div class="section-howitworks__item-text">Enter your credit card details and follow the
+                    directions. We use data encryption and only work with trusted e-payment providers for your
+                    extra safety.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Track your order</div>
+                <div class="section-howitworks__item-text">While you wait for your paper to be ready, you can
+                    check out the status of your order, chat with your essay writer and ask our customer support
+                    for updates.</div>
+            </li>
+
+
+            <li>
+                <div class="section-howitworks__item-title">Download the file</div>
+                <div class="section-howitworks__item-text">We’ll send you a notification when your
+                    custom-written paper is ready. Check it out in your profile, approve the order, and download
+                    the file to your device.</div>
+            </li>
+
+        </ol>
+        <div class="section-howitworks__btn">
+            <a href="/order.html" rel="nofollow" class="btn btn--green-fill btn--with-arrow">To the order
+                form</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-benefits ">
+    <div class="container">
+        <h2 class="section__title">Discover the benefits of our service</h2>
+        <p class="section__subtitle">The main reason to choose our professional essay writing services is that
+            we aim to please even the most demanding customers. Here’s what we offer.</p>
+        <ul class="section-benefits__list list--clean columns columns--col-3">
+
+            <li class="section-benefits__item ico__support--before" data-observed-bg>
+                <div class="section-benefits__item-title">24/7 customer service</div>
+                <div class="section-benefits__item-text">Our operators are always ready to help you if you have
+                    any questions.</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__timer--before" data-observed-bg>
+                <div class="section-benefits__item-title">Short deadlines</div>
+                <div class="section-benefits__item-text">Our writing service can help you with urgent
+                    assignments in just 4 hours!</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__pig--before" data-observed-bg>
+                <div class="section-benefits__item-title">Flexible prices</div>
+                <div class="section-benefits__item-text">Order in advance and get essay writing help at a lower
+                    price!</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__confidentiality--before" data-observed-bg>
+                <div class="section-benefits__item-title">Confidentiality</div>
+                <div class="section-benefits__item-text">We don’t publicly disclose any information you share
+                    with us.</div>
+            </li>
+
+
+            <li class="section-benefits__item ico__note-and-pen--before" data-observed-bg>
+                <div class="section-benefits__item-title">Free formatting</div>
+                <div class="section-benefits__item-text">We’ll make your paper look exactly how you want it to.
+                </div>
+            </li>
+
+
+            <li class="section-benefits__item ico__lists--before" data-observed-bg>
+                <div class="section-benefits__item-title">75+ disciplines</div>
+                <div class="section-benefits__item-text">Our paper writers cover an impressive range of
+                    subjects.</div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section class="section section-banner section-banner-green">
+    <div class="container">
+        <div>
+            <h2 class="section__title section-banner__title" data-observed-bg>Get all the writing help you need
+                with our professional essay service</h2>
+        </div>
+        <div class="section-banner__button">
+            <a href="/order.html" rel="nofollow" class="btn btn--white-fill btn--with-arrow">Order now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

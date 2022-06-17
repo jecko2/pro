@@ -1,0 +1,99 @@
+<header class="Header">
+    <div class="container">
+        <div class="Header__container">
+            <a class="Header__logo" href="/">The <span>CREED PAPERS</span></a>
+
+            <div class="Header__user-box">
+                {% if request.user.is_authenticated %}
+                <a class="btn btn--green-fill btn--small Header__user-box__link-order" rel="nofollow" href="">
+                    Order Paper
+                    <span></span><span></span><span></span><span></span>
+                </a>
+                {% else %}
+                <a class="btn btn--green-fill btn--small Header__user-box__link-order" rel="nofollow"
+                    href="{% url 'account:login' %}">
+                    Login
+                    <span></span><span></span><span></span><span></span>
+                </a>
+                {% endif %}
+            </div>
+            <button class="Header__burger" type="button" aria-label="toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="Header__menu">
+                <ul class="Header__menu-list list--clean">
+                    <li class="Header__menu-list-item"><a href="">Pricing</a></li>
+                    <li class="Header__menu-list-item"><a href="">Testimonials</a></li>
+                    <li class="Header__menu-list-item"><a href="">Our writers</a></li>
+                    <li class="Header__menu-list-item Header__submenu-container">
+                        <span class="Header__submenu-label">Services</span>
+                        <ul class="Header__submenu Header__submenu__columns list--clean">
+                            <li class="Header__menu-list-item">
+                                <a href="">Research paper writing service</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Speech writing services</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Dissertation writing services</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Assignment writing service</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Custom essay writing</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Write my essay</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Buy essay</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Write my review</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Thesis writing service</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Lab report writing service</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Do my homework</a>
+                            </li>
+                            <li class="Header__menu-list-item">
+                                <a href="">Resume writing services</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="Header__menu-list-item Header__submenu-container">
+                        <span class="Header__submenu-label">More</span>
+                        <ul class="Header__submenu list--clean">
+                            <li class="Header__menu-list-item"><a href="" rel="nofollow">About
+                                    us</a></li>
+                            <li class="Header__menu-list-item"><a href="" rel="nofollow">Contact
+                                    us</a></li>
+                            <li class="Header__menu-list-item"><a href="" rel="nofollow">How it
+                                    works</a></li>
+                            <li class="Header__menu-list-item"><a href="">FAQ</a></li>
+                            <li class="Header__menu-list-item"><a href="">Our services</a>
+                            </li>
+                            <li class="Header__menu-list-item"><a href="">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="Header__menu-list-item Header__menu-order-block">
+                        <div class="Header__menu-order-block__phone">
+                            <a href="tel:+1-855-332-6213"><span class="hidden-info"
+                                    data-title="1-855-332-6213"></span></a>
+                            <a href=""><span class="hidden-info" data-title=""></span></a>
+                        </div>
+                        <a class="btn btn--green-fill btn--with-arrow Header__menu-order-block__link" rel="nofollow"
+                            href="/order.html">Order now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
